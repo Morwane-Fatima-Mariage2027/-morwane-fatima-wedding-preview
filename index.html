@@ -12,7 +12,7 @@
 :root{--paper:#f2eadc;--paper2:#e9dfcf;--ink:#403b32;--olive:#485039;--indigo:#46556a;--terra:#a56f54;--line:#aaa08f}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Montserrat,sans-serif;background:#d8d0c2}
 .paper{max-width:1500px;margin:auto;background:var(--paper);overflow:hidden;box-shadow:0 0 70px #7d756955}
-.texture{background-image:radial-gradient(#6d62561c .65px,transparent .7px),radial-gradient(#fff8 .7px,transparent .8px);background-size:7px 7px,11px 11px}
+.texture{background:linear-gradient(105deg,#f4eddf 0%,#efe6d7 48%,#f5eee2 100%)}
 nav{height:76px;display:flex;align-items:center;gap:32px;padding:0 5%;font:500 11px Montserrat;letter-spacing:.06em;border-bottom:1px solid #5e574d22}
 nav .mark{font:500 27px "Cormorant Garamond";margin-right:auto}nav a{color:inherit;text-decoration:none}nav a:hover{opacity:.55}
 .hero{min-height:720px;display:grid;grid-template-columns:42% 58%;position:relative}
@@ -21,7 +21,7 @@ nav .mark{font:500 27px "Cormorant Garamond";margin-right:auto}nav a{color:inher
 .hero h1 span{display:block;margin-left:70px}.place{font:500 28px/1.2 "Cormorant Garamond";letter-spacing:.22em}.date{font:500 17px Montserrat;letter-spacing:.2em;margin-top:8px}
 .promise{font:italic 22px/1.5 "Cormorant Garamond";max-width:450px;margin-top:45px}.olive-line{height:1px;width:100px;background:var(--olive);margin:26px 0}
 .hero-photo{min-height:720px;background:linear-gradient(90deg,var(--paper) 0%,transparent 12%),url('https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/couple.jpeg') center/cover;position:relative}
-.hero-photo:after{content:"les plus beaux voyages\A sont ceux qu’on vit à deux ♡";white-space:pre;position:absolute;right:7%;top:13%;font:500 27px/1.1 Caveat;color:#514c41;transform:rotate(-7deg)}
+
 .leaf{position:absolute;font:70px/1 serif;color:var(--olive);opacity:.8}.leaf.one{left:-18px;top:88px;transform:rotate(-28deg)}.leaf.two{left:20px;bottom:45px;transform:rotate(18deg)}
 .torn{position:relative}.torn:before{content:"";position:absolute;z-index:5;top:-18px;left:0;right:0;height:35px;background:var(--paper);clip-path:polygon(0 43%,3% 59%,6% 37%,9% 58%,12% 42%,15% 62%,18% 38%,21% 55%,24% 40%,27% 61%,30% 44%,33% 57%,36% 36%,39% 59%,42% 43%,45% 62%,48% 39%,51% 56%,54% 40%,57% 60%,60% 42%,63% 58%,66% 38%,69% 61%,72% 43%,75% 56%,78% 39%,81% 62%,84% 41%,87% 57%,90% 38%,93% 59%,96% 42%,100% 55%,100% 100%,0 100%)}
 .story-program{display:grid;grid-template-columns:1fr 1.25fr;padding:90px 6% 110px;gap:7%;position:relative}
@@ -39,12 +39,12 @@ nav .mark{font:500 27px "Cormorant Garamond";margin-right:auto}nav a{color:inher
 <body><main class="paper texture">
 <nav><a class="mark">M & F</a><a href="#story">Notre histoire</a><a href="#programme">Programme</a><a>Dar Layyina</a><a>Séjour</a><a>Hébergements</a><a>RSVP</a></nav>
 <section class="hero">
-<div class="hero-copy"><span class="leaf one">❧</span><div class="eyebrow">Toujours mieux ensemble</div><h1>Morwane<span>& Fatima</span></h1><div class="place">MARRAKECH</div><div class="date">25 — 26 MAI 2027</div><div class="olive-line"></div><p class="promise">Deux jours, une seule promesse : célébrer la vie, l’amour et tous ceux qui nous sont chers.</p><span class="leaf two">❧</span></div>
+<div class="hero-copy"><span class="leaf one">❧</span><div class="eyebrow">Toujours mieux ensemble</div><h1>Morwane<span>& Fatima</span></h1><div class="place">MARRAKECH</div><div class="date">25 <span aria-hidden="true">|</span> 26 MAI 2027</div><div class="olive-line"></div><p class="promise">D’Agadez à Marrakech, des années à grandir côte à côte — et cette fois, nous vous invitons à écrire la suite avec nous.</p><span class="leaf two">❧</span></div>
 <div class="hero-photo"></div>
 </section>
 <section class="story-program torn" id="story">
-<div class="story"><h2 class="section-title">Notre histoire</h2><div class="eyebrow">De rencontres & d’évidences</div><p>Des chemins qui se croisent, des aventures partagées, et aujourd’hui une nouvelle page à écrire ensemble à Marrakech.</p><div class="polaroids"><div class="polaroid p1"><img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/couple.jpeg" alt="Morwane et Fatima"></div><div class="polaroid p2"><img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/couple.jpeg" alt=""><span class="note">toujours mieux ensemble ♡</span></div></div></div>
+<div class="story"><h2 class="section-title">Notre histoire</h2><div class="eyebrow">Quelques années, mille souvenirs</div><p>Nous, c’est Morwane & Fatima. Une histoire commencée bien avant Marrakech, construite au fil des années, des départs, des retours et d’un quotidien appris à deux. Nos racines ne racontent pas exactement la même histoire, mais elles ont fini par en créer une nouvelle : la nôtre.</p><p>Les 25 et 26 mai 2027, nous réunirons à Marrakech les personnes qui ont compté sur ce chemin. Deux jours entre traditions, familles, rires et fête — pour célébrer tout ce qui nous a menés jusqu’ici, et surtout tout ce qui vient après.</p><div class="polaroids"><div class="polaroid p1"><img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/couple.jpeg" alt="Morwane et Fatima"></div><div class="polaroid p2"><img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/couple.jpeg" alt=""></div></div></div>
 <div class="programme" id="programme"><h2 class="section-title">Programme</h2><div class="days"><article class="day one"><div class="num">25</div><div class="month">MAI 2027</div><h3>Jour 1 · Traditionnel</h3><p>Henné, traditions, émotions et moments en famille. Une soirée inspirée de nos racines touarègues.</p></article><article class="day two"><div class="num">26</div><div class="month">MAI 2027</div><h3>Jour 2 · Cérémonie & réception</h3><p>Une journée pour se dire oui, partager un dîner et faire la fête ensemble.</p></article></div></div>
 </section>
-<div class="preview-note">Première esquisse du nouveau carnet — Morwane & Fatima ♡</div>
+<div class="preview-note">Morwane & Fatima · Marrakech · Mai 2027</div>
 </main></body></html>
