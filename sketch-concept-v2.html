@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f1e8">
+<meta name="robots" content="noindex,nofollow">
+<title>Morwane & Fatima — Marrakech 2027</title>
+<meta name="description" content="Morwane & Fatima — 25 & 26 mai 2027 à Marrakech.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:wght@400;500;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f8f3ea;
+  --paper2:#f2eadf;
+  --ink:#2d302b;
+  --soft:#706e66;
+  --olive:#667052;
+  --olive-dark:#47513b;
+  --olive-light:#9ea68b;
+  --ivory:#f6f1e7;
+  --champagne:#d5bea0;
+  --beige:#c9b49b;
+  --sand:#d9cbb8;
+  --indigo:#2f4665;
+  --indigo-soft:#647894;
+  --terra:#a36d55;
+  --line:rgba(45,48,43,.48);
+  --max:1180px;
+  --sans:"DM Sans",sans-serif;
+  --hand:"Architects Daughter",cursive;
+  --scribble:"Reenie Beanie",cursive;
+  --ease:cubic-bezier(.2,.75,.25,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:var(--sans);
+  background:
+    radial-gradient(circle at 20% 15%,rgba(255,255,255,.78),transparent 28%),
+    radial-gradient(circle at 85% 12%,rgba(102,112,82,.05),transparent 22%),
+    var(--paper);
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed; inset:0; z-index:999; pointer-events:none; opacity:.2;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(45,48,43,.02) 0 1px,transparent 1px 4px),
+    repeating-linear-gradient(90deg,rgba(45,48,43,.012) 0 1px,transparent 1px 6px);
+  mix-blend-mode:multiply;
+}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+img,svg{max-width:100%;display:block}
+.wrap{width:min(var(--max),88vw);margin:auto}
+.hand{font-family:var(--hand)}
+.scribble{font-family:var(--scribble)}
+.eyebrow{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--soft)}
+.section{padding:6.7rem 0;position:relative}
+.section-title{font:400 clamp(3rem,6vw,5.5rem)/.95 var(--scribble);margin:.2rem 0 .8rem;color:var(--olive-dark)}
+.section-lead{max-width:700px;color:#5d5c55;font-size:1rem;line-height:1.75}
+.sketch-sep{height:12px;position:relative;margin:0 auto;width:min(var(--max),88vw)}
+.sketch-sep::before,.sketch-sep::after{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:var(--line)}
+.sketch-sep::after{top:7px;opacity:.18;transform:rotate(.12deg)}
+.button{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:46px;padding:.78rem 1.08rem;text-decoration:none;
+  border:1.2px solid var(--ink);background:transparent;color:var(--ink);
+  border-radius:48% 52% 46% 54% / 56% 44% 53% 47%;
+  font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;
+  transition:transform .2s var(--ease),background .2s;
+}
+.button:hover{transform:rotate(-1deg) translateY(-1px);background:rgba(213,190,160,.16)}
+.button.olive{background:var(--olive-dark);color:white;border-color:var(--olive-dark)}
+:focus-visible{outline:2px solid var(--champagne);outline-offset:4px}
+
+/* ENVELOPE */
+.gate{
+  position:fixed; inset:0; z-index:5000; display:grid; place-items:center;
+  background:#f3ede3; transition:opacity .6s var(--ease),visibility .6s var(--ease);
+}
+.gate-inner{width:min(780px,94vw);display:grid;justify-items:center;gap:1.2rem;perspective:1400px}
+.envelope{
+  width:min(660px,90vw); aspect-ratio:1.55/1; position:relative;
+  filter:drop-shadow(0 30px 36px rgba(55,57,49,.14));
+  transform-style:preserve-3d;
+}
+.env-back{position:absolute;inset:0;background:#747d60;border:1px solid rgba(45,48,43,.36)}
+.letter{
+  position:absolute;left:6%;right:6%;bottom:5%;height:80%;z-index:2;
+  background:var(--ivory);border:1px solid rgba(45,48,43,.16);
+  display:grid;place-items:center;text-align:center;padding:1.4rem;
+  transform:translateY(30%);transition:transform .95s .22s var(--ease);
+}
+.letter .names{font:400 clamp(3.2rem,9vw,6rem)/.85 var(--scribble);color:var(--olive-dark)}
+.letter .date{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;margin-top:.5rem}
+.env-front{position:absolute;inset:auto 0 0;height:70%;z-index:4;background:#71795d;clip-path:polygon(0 0,50% 67%,100% 0,100% 100%,0 100%)}
+.env-front::before,.env-front::after{content:"";position:absolute;bottom:0;width:52%;height:100%;background:#7e866b}
+.env-front::before{left:0;clip-path:polygon(0 0,100% 68%,100% 100%,0 100%)}
+.env-front::after{right:0;clip-path:polygon(100% 0,0 68%,0 100%,100% 100%)}
+.flap{
+  position:absolute;left:0;right:0;top:0;height:59%;z-index:5;
+  background:linear-gradient(180deg,#879072,#747d60);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  transform-origin:top;transition:transform .8s var(--ease);backface-visibility:hidden;
+}
+.seal{
+  position:absolute;left:50%;top:56%;z-index:7;transform:translate(-50%,-50%);
+  width:80px;aspect-ratio:1;border:0;border-radius:50%;cursor:pointer;
+  background:radial-gradient(circle at 36% 28%,#efd9ad 0 18%,#c8a46b 63%,#9d7944 100%);
+  box-shadow:0 7px 16px rgba(52,46,35,.27),inset 0 0 0 2px rgba(255,255,255,.25);
+  color:#5d482c;font:500 1.45rem var(--hand);
+}
+.gate-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#686d5d}
+.gate.open .flap{transform:rotateX(-180deg)}
+.gate.open .seal{opacity:0;pointer-events:none;transition:opacity .25s}
+.gate.open .letter{transform:translateY(-28%)}
+.gate.leave{opacity:0;visibility:hidden}
+body.locked{overflow:hidden}
+
+/* NAV */
+.header{position:fixed;inset:0 0 auto;z-index:80;transition:background .3s,border-color .3s}
+.header.scrolled{background:rgba(248,243,234,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(45,48,43,.13)}
+.nav{height:72px;display:flex;align-items:center;gap:1.2rem}
+.brand{text-decoration:none;font:400 2rem var(--scribble);color:var(--olive-dark)}
+.links{margin-left:auto;display:flex;gap:1.25rem;align-items:center}
+.links a{text-decoration:none;font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.menu-btn{display:none;margin-left:auto;width:44px;height:44px;border:0;background:transparent;cursor:pointer}
+.menu-btn span{display:block;width:22px;height:1px;background:var(--ink);margin:5px auto}
+.mobile-menu{display:none;position:fixed;z-index:70;inset:72px 0 auto;background:var(--paper);padding:1rem 6vw 1.5rem;border-bottom:1px solid var(--line)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;text-decoration:none;padding:.7rem 0;border-bottom:1px solid rgba(45,48,43,.12);font:400 1.6rem var(--hand)}
+
+/* HERO */
+.hero{min-height:100svh;padding-top:72px;display:grid;align-items:center;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:7vw;align-items:center;padding:4.5rem 0}
+.hero h1{font:400 clamp(5rem,11vw,9.8rem)/.78 var(--scribble);margin:.5rem 0 1rem;color:var(--olive-dark);letter-spacing:-.02em}
+.hero-meta{font-size:.77rem;letter-spacing:.16em;text-transform:uppercase;color:#5f6259}
+.hero-note{max-width:500px;margin-top:1.3rem;color:#5d5c55;font-size:.98rem;line-height:1.75}
+.hero-art{min-height:520px;display:grid;place-items:center;position:relative}
+.hero-art::before{
+  content:"";position:absolute;width:82%;height:66%;
+  border:1.2px solid var(--ink);border-radius:47% 53% 46% 54% / 45% 56% 44% 55%;transform:rotate(-2deg);
+}
+.hero-art::after{
+  content:"";position:absolute;width:72%;height:57%;
+  border:1px solid rgba(45,48,43,.28);border-radius:53% 47% 51% 49% / 42% 58% 46% 54%;transform:rotate(1.7deg);
+}
+.hero-doodle{width:min(430px,82%);position:relative;z-index:2}
+.hero-caption{position:absolute;bottom:11%;right:8%;font:400 2rem var(--scribble);color:var(--olive-dark);transform:rotate(-5deg)}
+
+/* STORY */
+.story{background:var(--paper2)}
+.story-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:8vw;align-items:start}
+.story-kicker{font:400 2.2rem var(--scribble);color:var(--indigo);transform:rotate(-2deg)}
+.story-copy{font:400 clamp(1.55rem,3vw,2.35rem)/1.35 var(--hand);margin:0;color:#41433e}
+.note-paper{
+  margin-top:2rem;display:inline-block;padding:1.1rem 1.4rem;background:#f8f2e7;border:1px solid rgba(45,48,43,.3);
+  box-shadow:5px 7px 0 rgba(45,48,43,.05);transform:rotate(-.7deg);font:400 1.55rem var(--scribble)
+}
+
+/* DAYS */
+.days{background:var(--olive-dark);color:#f7f2e8}
+.days .section-title{color:#f7f2e8}
+.days .eyebrow{color:#dac7a7}
+.days-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2rem}
+.days-head p{max-width:520px;color:#ddd5c8}
+.day-tabs{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}
+.day-tab{border:0;background:transparent;color:inherit;text-align:left;padding:1.25rem;cursor:pointer}
+.day-tab + .day-tab{border-left:1px solid rgba(255,255,255,.22)}
+.day-tab small{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase}
+.day-tab strong{display:block;font:400 2rem var(--hand);margin-top:.25rem}
+.day-tab.active{background:#f5eee2;color:var(--olive-dark)}
+.day-panel{display:none;padding-top:2.6rem}
+.day-panel.active{display:grid;grid-template-columns:.72fr 1.28fr;gap:7vw}
+.day-identity .num{font:400 7rem/1 var(--scribble);color:#dcc498}
+.day-identity h3{font:400 2.4rem/1.05 var(--hand);margin:.2rem 0 .5rem}
+.day-identity p{font:400 1.05rem/1.55 var(--hand);opacity:.82;max-width:380px}
+.day-palette{display:flex;gap:.55rem;margin-top:1rem}.sw{width:36px;height:36px;border:1px solid rgba(255,255,255,.26)}
+.sw.indigo{background:var(--indigo)}.sw.sand{background:var(--sand)}.sw.terra{background:var(--terra)}.sw.olive{background:var(--olive)}.sw.ivory{background:var(--ivory)}.sw.champagne{background:var(--champagne)}
+.timeline{border-left:1px solid rgba(255,255,255,.28);padding-left:2rem}
+.event{position:relative;padding:0 0 1.7rem}
+.event::before{content:"";position:absolute;left:-2.3rem;top:.43rem;width:.55rem;height:.55rem;border-radius:50%;background:var(--olive-dark);border:1px solid white}
+.event-time{font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;color:#dcc498}
+.event h4{font:400 1.65rem var(--hand);margin:.1rem 0 .15rem}
+.event p{margin:0;color:#dcd4c8;font-size:.94rem;line-height:1.6}
+
+/* THEMES */
+.themes{background:var(--paper)}
+.themes-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.3rem}
+.theme-card{min-height:430px;padding:2rem;position:relative;display:flex;flex-direction:column;justify-content:flex-end;color:white;overflow:hidden}
+.theme-card::before{content:"";position:absolute;inset:1rem;border:1px solid rgba(255,255,255,.2);border-radius:2% 3% 2% 4% / 3% 2% 4% 2%}
+.theme-card.day1{background:linear-gradient(155deg,#233a58,#405a7a)}
+.theme-card.day2{background:linear-gradient(155deg,#566044,#7f896b)}
+.theme-card .date{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.theme-card h3{font:400 clamp(2.5rem,4vw,3.8rem)/1 var(--scribble);margin:.2rem 0 .35rem}
+.theme-card p{font:400 1.05rem/1.5 var(--hand);max-width:480px;margin:0;opacity:.9}
+.moodboard{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem
+}
+.mood{
+  aspect-ratio:4/5;position:relative;border:1.1px solid var(--ink);background:#fffaf3;overflow:hidden;
+  border-radius:2% 3% 2% 4% / 3% 2% 4% 2%;transform:rotate(var(--r,0deg))
+}
+.mood::before{content:"";position:absolute;inset:8px;border:1px solid rgba(45,48,43,.22)}
+.mood::after{content:"inspiration";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-5deg);font:400 1.7rem var(--scribble);color:#8b867e}
+
+/* VENUE */
+.venue{background:var(--paper2);text-align:center}
+.venue .section-title{margin-bottom:1.5rem}
+.map-frame{max-width:900px;margin:0 auto;border:1.1px solid var(--ink);padding:8px;background:#f9f4eb;transform:rotate(-.15deg)}
+.map-frame iframe{width:100%;height:420px;border:0;display:block}
+.venue .button{margin-top:1.3rem}
+
+/* STAY */
+.stay{background:var(--paper)}
+.stay-open{
+  width:100%;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem;
+  border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:transparent;padding:1.3rem 0;text-align:left;cursor:pointer
+}
+.stay-open strong{font:400 2rem var(--hand)}
+.stay-open span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.stay-panel{display:none;padding-top:1.8rem}.stay-panel.open{display:block}
+.stay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.stay-card{padding:1.4rem;border:1px solid var(--ink);background:#fffaf3;border-radius:2% 3% 2% 4% / 3% 2% 4% 2%}
+.stay-card h3{font:400 2rem var(--scribble);margin:0 0 .4rem;color:var(--olive-dark)}
+.stay-card p,.stay-card li{font-size:.94rem;color:#5d5c55;line-height:1.65}.stay-card ul{padding-left:1.2rem}
+
+/* RSVP */
+.rsvp{background:var(--olive-dark);color:white}
+.rsvp .section-title{color:white}
+.rsvp-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:7vw}
+.rsvp-copy p{color:#ddd4c8}
+.form{background:var(--ivory);color:var(--ink);border:1px solid rgba(255,255,255,.22);padding:1.5rem;border-radius:2% 3% 2% 4% / 3% 2% 4% 2%}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.field.full{grid-column:1/-1}
+label{display:block;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#60625a;margin-bottom:.35rem}
+input,select,textarea{width:100%;min-height:46px;border:1px solid var(--ink);background:transparent;padding:.78rem .85rem;border-radius:50% 50% 47% 53% / 8% 9% 7% 8%;outline:none}
+textarea{min-height:100px;resize:vertical}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px rgba(213,190,160,.25)}
+.submit{width:100%;margin-top:1rem}
+.status{min-height:1.3rem;margin-top:.7rem;font-size:.9rem;color:#60625a}
+
+/* FAQ */
+.faq{background:var(--paper2)}
+.faq-grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:7vw}
+.faq-list{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);padding:1rem 0}
+summary{list-style:none;cursor:pointer;font:400 1.5rem var(--hand);position:relative;padding-right:2rem}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";position:absolute;right:0}details[open] summary::after{content:"−"}
+details p{max-width:720px;color:#5f5d56;line-height:1.7}
+
+/* FOOTER */
+footer{background:#2a3027;color:#eee8dd;padding:3.5rem 0;text-align:center}
+.footer-name{font:400 3.5rem var(--scribble)}
+.footer-meta{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:950px){
+  .links{display:none}.menu-btn{display:block}
+  .hero-grid,.story-grid,.day-panel.active,.rsvp-grid,.faq-grid{grid-template-columns:1fr;gap:2.2rem}
+  .hero-art{min-height:400px}
+  .themes-grid,.stay-grid{grid-template-columns:1fr}
+  .moodboard{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .wrap{width:min(100% - 2rem,var(--max))}
+  .section{padding:4.7rem 0}
+  .hero{min-height:auto}.hero-grid{padding:5rem 0 3rem}.hero h1{font-size:clamp(4.8rem,21vw,7rem)}.hero-art{min-height:330px}
+  .days-head{display:block}.day-tabs{grid-template-columns:1fr}.day-tab + .day-tab{border-left:0;border-top:1px solid rgba(255,255,255,.22)}
+  .timeline{padding-left:1.55rem}.event::before{left:-1.86rem}
+  .moodboard{grid-template-columns:1fr 1fr}
+  .map-frame iframe{height:350px}
+  .fields{grid-template-columns:1fr}.field.full{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}.reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="locked">
+
+<div class="gate" id="gate">
+  <div class="gate-inner">
+    <div class="envelope">
+      <div class="env-back"></div>
+      <div class="letter">
+        <div>
+          <div class="names">Morwane & Fatima</div>
+          <div class="date">25 & 26 mai 2027 · Marrakech</div>
+        </div>
+      </div>
+      <div class="flap"></div>
+      <div class="env-front"></div>
+      <button class="seal" id="seal" type="button" aria-label="Ouvrir l'invitation">M&F</button>
+    </div>
+    <div class="gate-label">Ouvrir l’invitation</div>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand">M & F</a>
+    <nav class="links">
+      <a href="#jours">Programme</a>
+      <a href="#themes">Univers</a>
+      <a href="#lieu">Lieu</a>
+      <a href="#sejour">Séjour</a>
+      <a href="#rsvp">RSVP</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#jours">Programme</a><a href="#themes">Univers</a><a href="#lieu">Lieu</a><a href="#sejour">Séjour</a><a href="#rsvp">RSVP</a><a href="#faq">FAQ</a>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Notre mariage à Marrakech</div>
+      <h1>Morwane<br>& Fatima</h1>
+      <div class="hero-meta">25 & 26 mai 2027 · Marrakech</div>
+      <p class="hero-note">Deux journées, deux atmosphères, une même histoire. Nos familles, nos racines et tous ceux qu’on aime réunis à Marrakech.</p>
+    </div>
+    <div class="hero-art reveal">
+      <svg class="hero-doodle" viewBox="0 0 520 520" aria-hidden="true">
+        <g fill="none" stroke="#2d302b" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M108 372 C120 250 165 170 260 110 C355 170 400 250 412 372" stroke-width="2"/>
+          <path d="M138 372 C151 276 188 210 260 162 C331 210 369 276 382 372" stroke-width="1.1" opacity=".55"/>
+          <path d="M260 110 C254 190 254 285 260 371" stroke-width=".9" opacity=".28"/>
+          <circle cx="222" cy="305" r="61" stroke-width="2"/>
+          <circle cx="296" cy="305" r="61" stroke-width="2"/>
+          <circle cx="222" cy="305" r="46" stroke-width="1" opacity=".35"/>
+          <circle cx="296" cy="305" r="46" stroke-width="1" opacity=".35"/>
+          <path d="M109 371 C160 360 208 362 260 371 C312 362 360 360 412 371" stroke-width="1.4"/>
+          <path d="M143 204 C124 191 116 169 120 151 C139 159 154 176 162 196" stroke-width="1.5"/>
+          <path d="M377 203 C396 190 404 168 400 150 C381 158 366 175 358 195" stroke-width="1.5"/>
+        </g>
+        <g fill="none" stroke="#667052" stroke-width="2" stroke-linecap="round">
+          <path d="M95 401 C155 390 207 391 260 401 C313 391 365 390 425 401"/>
+          <path d="M133 425 C188 417 224 419 260 426 C297 419 333 417 388 425" opacity=".5"/>
+        </g>
+      </svg>
+      <div class="hero-caption">Marrakech, 2027</div>
+    </div>
+  </div>
+</section>
+
+<div class="sketch-sep"></div>
+
+<section class="section story">
+  <div class="wrap story-grid reveal">
+    <div>
+      <div class="story-kicker">nous deux</div>
+      <div class="note-paper">Niger + France + Marrakech</div>
+    </div>
+    <p class="story-copy">Nos racines ne racontent pas exactement la même histoire. Elles ont fini par en créer une nouvelle : la nôtre.</p>
+  </div>
+</section>
+
+<section class="section days" id="jours">
+  <div class="wrap">
+    <div class="days-head reveal">
+      <div><div class="eyebrow">25 & 26 mai</div><h2 class="section-title">Les deux jours</h2></div>
+      <p>Le déroulé reste simple ici : les moments importants, sans publier d’horaires tant qu’ils ne sont pas définitivement validés.</p>
+    </div>
+
+    <div class="day-tabs reveal">
+      <button class="day-tab active" data-day="d25"><small>25 MAI</small><strong>Journée traditionnelle</strong></button>
+      <button class="day-tab" data-day="d26"><small>26 MAI</small><strong>Cérémonie & réception</strong></button>
+    </div>
+
+    <article class="day-panel active" id="d25">
+      <div class="day-identity">
+        <div class="num">25</div>
+        <h3>Indigo & racines touarègues</h3>
+        <p>Une journée traditionnelle, familiale et chaleureuse, avec des détails inspirés de l’univers touareg.</p>
+        <div class="day-palette"><span class="sw indigo"></span><span class="sw sand"></span><span class="sw terra"></span></div>
+      </div>
+      <div class="timeline">
+        <div class="event"><div class="event-time">Matin / après-midi</div><h4>Henné de Fatima</h4><p>Un moment calme entourée des proches avant l’arrivée des invités.</p></div>
+        <div class="event"><div class="event-time">Puis</div><h4>Henné de Morwane</h4><p>Traditions, famille et premiers moments partagés.</p></div>
+        <div class="event"><div class="event-time">En soirée</div><h4>Soirée traditionnelle</h4><p>Musique, guitare, dîner, thé, pâtisseries et célébration.</p></div>
+      </div>
+    </article>
+
+    <article class="day-panel" id="d26" hidden>
+      <div class="day-identity">
+        <div class="num">26</div>
+        <h3>Olive, olivier & champagne</h3>
+        <p>Une ambiance naturelle, douce et sophistiquée : vert olive, ivoire, champagne et beige clair.</p>
+        <div class="day-palette"><span class="sw olive"></span><span class="sw ivory"></span><span class="sw champagne"></span></div>
+      </div>
+      <div class="timeline">
+        <div class="event"><div class="event-time">Arrivée</div><h4>Accueil des invités</h4><p>Retrouvailles à Dar Layyina avant la cérémonie.</p></div>
+        <div class="event"><div class="event-time">Cérémonie</div><h4>Cérémonie laïque</h4><p>Un moment entourés de nos familles et de nos proches.</p></div>
+        <div class="event"><div class="event-time">Réception</div><h4>Cocktail, dîner & fête</h4><p>Dîner, musique, DJ et danse.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section themes" id="themes">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Inspirations</div>
+      <h2 class="section-title">Deux univers, une seule histoire</h2>
+      <p class="section-lead">Le thème du 25 est traditionnel et indigo. Celui du 26 s’articule autour de l’olivier et du vert olive, avec des touches champagne, ivoire et beige clair.</p>
+    </div>
+
+    <div class="themes-grid reveal">
+      <article class="theme-card day1"><div class="date">25 MAI</div><h3>Indigo & tradition</h3><p>Touareg, matières naturelles, chaleur, tapis, musique et détails graphiques fins.</p></article>
+      <article class="theme-card day2"><div class="date">26 MAI</div><h3>Olive & olivier</h3><p>Vert olive, champagne, ivoire et beige clair. Naturel, lumineux et sophistiqué.</p></article>
+    </div>
+
+    <div class="moodboard reveal">
+      <div class="mood" style="--r:-1deg"></div>
+      <div class="mood" style="--r:.8deg"></div>
+      <div class="mood" style="--r:-.4deg"></div>
+      <div class="mood" style="--r:1deg"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section venue" id="lieu">
+  <div class="wrap reveal">
+    <div class="eyebrow">Notre lieu de célébration</div>
+    <h2 class="section-title">Rendez-vous à Marrakech</h2>
+    <div class="map-frame">
+      <iframe title="Dar Layyina sur la carte" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Dar%20Layyina%20Marrakech&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+    <a class="button olive" href="https://www.google.com/maps/search/?api=1&query=Dar+Layyina+Marrakech" target="_blank" rel="noopener">Ouvrir le GPS</a>
+  </div>
+</section>
+
+<section class="section stay" id="sejour">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Marrakech</div>
+      <h2 class="section-title">Préparer votre séjour</h2>
+    </div>
+    <button class="stay-open reveal" id="stayBtn" type="button" aria-expanded="false" aria-controls="stayPanel"><strong>Tout ce qu’il faut, au même endroit</strong><span>Ouvrir</span></button>
+    <div class="stay-panel" id="stayPanel">
+      <div class="stay-grid">
+        <article class="stay-card"><h3>Hôtels</h3><p>Une sélection d’hôtels vérifiés sera ajoutée ici pour que chacun puisse choisir facilement.</p></article>
+        <article class="stay-card"><h3>Transport</h3><p>Les informations de transfert et de déplacement seront regroupées ici dès qu’elles seront finalisées.</p></article>
+        <article class="stay-card"><h3>Marrakech</h3><ul><li>Jardins & palais</li><li>Médina & souks</li><li>Restaurants & cafés</li><li>Hammam, spa & rooftops</li></ul></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section rsvp" id="rsvp">
+  <div class="wrap rsvp-grid">
+    <div class="rsvp-copy reveal">
+      <div class="eyebrow" style="color:#dac7a7">Votre réponse</div>
+      <h2 class="section-title">RSVP</h2>
+      <p>Quelques informations seulement, pour que nous puissions bien vous accueillir.</p>
+    </div>
+
+    <form class="form reveal" id="rsvpForm" action="https://formspree.io/f/xeajyaqe" method="POST">
+      <div class="fields">
+        <div class="field"><label for="name">Nom & prénom</label><input id="name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="presence">Présence</label><select id="presence" name="presence" required><option value="">Choisir</option><option>Présent(e) les deux jours</option><option>Uniquement le 25</option><option>Uniquement le 26</option><option>Absent(e)</option></select></div>
+        <div class="field"><label for="guest">Accompagnant(e)</label><input id="guest" name="guest"></div>
+        <div class="field"><label for="children">Enfants</label><input id="children" name="children" inputmode="numeric" placeholder="0"></div>
+        <div class="field full"><label for="allergies">Allergies ou restrictions alimentaires</label><textarea id="allergies" name="allergies"></textarea></div>
+        <div class="field full"><label for="transport">Besoin d’un transport ?</label><select id="transport" name="transport"><option value="">Choisir</option><option>Oui</option><option>Non</option><option>À confirmer</option></select></div>
+      </div>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px">
+      <button class="button olive submit" type="submit">Envoyer ma réponse</button>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="wrap faq-grid reveal">
+    <div><div class="eyebrow">FAQ</div><h2 class="section-title">Questions pratiques</h2></div>
+    <div class="faq-list">
+      <details><summary>Où auront lieu les deux journées ?</summary><p>À Dar Layyina, à Marrakech.</p></details>
+      <details><summary>Les enfants sont-ils les bienvenus ?</summary><p>Oui. Merci simplement de les indiquer dans votre RSVP.</p></details>
+      <details><summary>Comment rejoindre le lieu ?</summary><p>Le bouton « Ouvrir le GPS » vous conduit directement à l’itinéraire.</p></details>
+      <details><summary>Où dormir ?</summary><p>Une sélection d’hôtels sera regroupée dans la rubrique « Préparer votre séjour ».</p></details>
+      <details><summary>Quels sont les thèmes des deux journées ?</summary><p>Le 25 mai : indigo et racines touarègues. Le 26 mai : olive, olivier, champagne, ivoire et beige clair.</p></details>
+      <details><summary>Puis-je prendre des photos ?</summary><p>Oui, bien sûr. Après le mariage, un espace pourra également être ajouté pour partager les photos entre nous.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><div class="footer-name">Morwane & Fatima</div><div class="footer-meta">25 & 26 mai 2027 · Marrakech</div></div></footer>
+
+<script>
+const gate=document.getElementById('gate'),seal=document.getElementById('seal');
+seal.addEventListener('click',()=>{
+  gate.classList.add('open');
+  setTimeout(()=>gate.classList.add('leave'),850);
+  setTimeout(()=>{gate.remove();document.body.classList.remove('locked')},1450);
+});
+
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>24),{passive:true});
+
+const menuBtn=document.getElementById('menuBtn'),mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click',()=>{
+  const open=mobileMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',String(open));
+  mobileMenu.setAttribute('aria-hidden',String(!open));
+});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mobileMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+  mobileMenu.setAttribute('aria-hidden','true');
+}));
+
+document.querySelectorAll('.day-tab').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.day-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.day-panel').forEach(p=>{p.hidden=true;p.classList.remove('active')});
+  btn.classList.add('active');
+  const panel=document.getElementById(btn.dataset.day);
+  panel.hidden=false;panel.classList.add('active');
+}));
+
+const stayBtn=document.getElementById('stayBtn'),stayPanel=document.getElementById('stayPanel');
+stayBtn.addEventListener('click',()=>{
+  const open=stayPanel.classList.toggle('open');
+  stayBtn.setAttribute('aria-expanded',String(open));
+  stayBtn.querySelector('span').textContent=open?'Fermer':'Ouvrir';
+});
+
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const form=document.getElementById('rsvpForm'),status=document.getElementById('status');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();status.textContent='Envoi…';
+  const submit=form.querySelector('button[type="submit"]');submit.disabled=true;
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(!res.ok)throw new Error();
+    form.reset();status.textContent='Merci — votre réponse a bien été envoyée.';
+  }catch(err){status.textContent='Un problème est survenu. Merci de réessayer.'}
+  finally{submit.disabled=false}
+});
+</script>
+</body>
+</html>
