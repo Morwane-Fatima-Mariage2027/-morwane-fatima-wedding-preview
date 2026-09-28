@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#fcfbf9" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Morwane & Fatima — 25 & 26 mai 2027</title>
+  <meta name="description" content="Morwane & Fatima — 25 & 26 mai 2027 à Marrakech." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --paper:#fcfbf9;
+      --paper-warm:#f6f1e9;
+      --ink:#2d2d2d;
+      --muted:#77736d;
+      --line:#393939;
+      --champagne:#d8c2a0;
+      --ivory:#f4efe6;
+      --brown:#9c7b63;
+      --white:#ffffff;
+      --max:1120px;
+      --ease:cubic-bezier(.2,.75,.25,1);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 20% 10%,rgba(0,0,0,.018),transparent 34%),
+        radial-gradient(circle at 80% 30%,rgba(0,0,0,.012),transparent 28%),
+        var(--paper);
+      font-family:"Inter",sans-serif;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.18;
+      background-image:
+        repeating-linear-gradient(0deg,rgba(45,45,45,.018) 0 1px,transparent 1px 4px),
+        repeating-linear-gradient(90deg,rgba(45,45,45,.012) 0 1px,transparent 1px 5px);
+      mix-blend-mode:multiply;
+      z-index:999;
+    }
+
+    a{color:inherit}
+    button,input,select,textarea{font:inherit}
+    img,svg{display:block;max-width:100%}
+    .wrap{width:min(var(--max),88vw);margin-inline:auto}
+
+    .sketch-line{
+      height:1px;
+      background:var(--line);
+      opacity:.48;
+      transform:rotate(-.15deg);
+      transform-origin:left center;
+    }
+
+    .eyebrow{
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .script{
+      font-family:"Caveat",cursive;
+      font-weight:600;
+      letter-spacing:.01em;
+    }
+
+    .section{
+      padding:6.8rem 0;
+      position:relative;
+    }
+
+    .section-title{
+      font:600 clamp(3rem,6vw,5.4rem)/.98 "Caveat",cursive;
+      margin:.35rem 0 1rem;
+    }
+
+    .section-intro{
+      max-width:650px;
+      color:var(--muted);
+      font-size:1rem;
+      margin:0;
+    }
+
+    /* NAVIGATION */
+    .site-header{
+      position:fixed;
+      top:0;left:0;right:0;
+      z-index:50;
+      transition:background .3s ease,border-color .3s ease;
+    }
+    .site-header.scrolled{
+      background:rgba(252,251,249,.93);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(45,45,45,.12);
+    }
+    .nav{
+      height:72px;
+      display:flex;
+      align-items:center;
+      gap:1.4rem;
+    }
+    .brand{
+      text-decoration:none;
+      font:600 1.65rem "Caveat",cursive;
+    }
+    .nav-links{
+      margin-left:auto;
+      display:flex;
+      align-items:center;
+      gap:1.4rem;
+    }
+    .nav-links a{
+      text-decoration:none;
+      font-size:.7rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:600;
+    }
+    .nav-links a:last-child{
+      padding:.7rem 1rem;
+      border:1px solid var(--line);
+      border-radius:48% 52% 46% 54% / 56% 44% 52% 48%;
+      background:rgba(216,194,160,.12);
+    }
+    .menu-btn{
+      display:none;
+      margin-left:auto;
+      border:0;
+      background:transparent;
+      width:44px;
+      height:44px;
+      cursor:pointer;
+    }
+    .menu-btn span{
+      display:block;
+      width:22px;
+      height:1px;
+      margin:5px auto;
+      background:var(--ink);
+    }
+    .mobile-menu{
+      display:none;
+      position:fixed;
+      inset:72px 0 auto;
+      background:var(--paper);
+      border-bottom:1px solid rgba(45,45,45,.16);
+      padding:1rem 6vw 1.5rem;
+      z-index:45;
+    }
+    .mobile-menu.open{display:block}
+    .mobile-menu a{
+      display:block;
+      text-decoration:none;
+      padding:.85rem 0;
+      border-bottom:1px solid rgba(45,45,45,.12);
+      font:600 1.3rem "Caveat",cursive;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100svh;
+      display:grid;
+      align-items:center;
+      padding-top:72px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      align-items:center;
+      gap:7vw;
+      padding:4rem 0;
+    }
+    .hero h1{
+      font:600 clamp(4.5rem,10vw,8.6rem)/.82 "Caveat",cursive;
+      margin:.7rem 0 1.4rem;
+      letter-spacing:-.035em;
+    }
+    .hero-meta{
+      font-size:.85rem;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .hero-note{
+      max-width:480px;
+      margin-top:1.4rem;
+      color:#55514d;
+      font-size:1rem;
+    }
+    .hero-art{
+      min-height:500px;
+      display:grid;
+      place-items:center;
+      position:relative;
+    }
+    .hero-art:before,
+    .hero-art:after{
+      content:"";
+      position:absolute;
+      border:1px solid rgba(45,45,45,.48);
+      width:78%;
+      height:62%;
+      border-radius:47% 53% 46% 54% / 42% 58% 44% 56%;
+      transform:rotate(-2deg);
+    }
+    .hero-art:after{
+      width:68%;
+      height:54%;
+      transform:rotate(2deg);
+      opacity:.45;
+    }
+    .line-art{
+      width:min(400px,84%);
+      position:relative;
+      z-index:2;
+      opacity:.92;
+    }
+    .hero-caption{
+      position:absolute;
+      bottom:9%;
+      right:8%;
+      font:500 1.55rem "Caveat",cursive;
+      transform:rotate(-4deg);
+      color:#64605a;
+    }
+
+    /* PROGRAMME */
+    .programme{background:var(--paper-warm)}
+    .timeline{
+      max-width:850px;
+      margin:3rem auto 0;
+      position:relative;
+    }
+    .timeline:before{
+      content:"";
+      position:absolute;
+      left:21px;
+      top:0;bottom:0;
+      width:1px;
+      background:rgba(45,45,45,.44);
+      transform:rotate(.15deg);
+    }
+    .day-label{
+      margin:3rem 0 1rem 4rem;
+      font:600 2.4rem "Caveat",cursive;
+    }
+    .event{
+      position:relative;
+      display:grid;
+      grid-template-columns:48px 150px 1fr;
+      gap:1.2rem;
+      padding:1.25rem 0;
+    }
+    .event:before{
+      content:"";
+      width:11px;height:11px;
+      border:1px solid var(--line);
+      border-radius:50%;
+      background:var(--paper-warm);
+      position:absolute;
+      left:16px;top:1.7rem;
+    }
+    .event-time{
+      grid-column:2;
+      color:var(--muted);
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      padding-top:.15rem;
+    }
+    .event-copy{grid-column:3}
+    .event-copy h3{
+      font:600 1.75rem "Caveat",cursive;
+      margin:0 0 .15rem;
+    }
+    .event-copy p{margin:0;color:#5e5b56}
+    .map-link{
+      margin:2.5rem 0 0 4rem;
+      display:inline-flex;
+      align-items:center;
+      gap:.7rem;
+      text-decoration:none;
+      padding:.75rem 1rem;
+      border:1px solid var(--line);
+      border-radius:54% 46% 50% 50% / 44% 58% 42% 56%;
+      background:rgba(216,194,160,.14);
+      font-size:.75rem;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      transition:transform .2s ease,background .2s ease;
+    }
+    .map-link:hover{transform:rotate(-1deg);background:rgba(216,194,160,.22)}
+
+    /* DRESS CODE */
+    .palette{
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+      margin-top:2rem;
+    }
+    .color-chip{
+      display:flex;
+      align-items:center;
+      gap:.55rem;
+      font-size:.82rem;
+    }
+    .color-dot{
+      width:28px;height:28px;
+      border:1px solid rgba(45,45,45,.45);
+      border-radius:49% 51% 46% 54% / 53% 47% 55% 45%;
+    }
+    .dot-champagne{background:var(--champagne)}
+    .dot-ivory{background:var(--ivory)}
+    .dot-brown{background:var(--brown)}
+    .dot-white{background:#fff}
+
+    .mood-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1rem;
+      margin-top:2.5rem;
+    }
+    .mood-slot{
+      aspect-ratio:4/5;
+      border:1px solid var(--line);
+      position:relative;
+      background:rgba(255,255,255,.45);
+      transform:rotate(var(--r,0deg));
+      overflow:hidden;
+      border-radius:2% 3% 2% 4% / 3% 2% 4% 2%;
+    }
+    .mood-slot:before{
+      content:"";
+      position:absolute;
+      inset:7px;
+      border:1px solid rgba(45,45,45,.28);
+      transform:rotate(.6deg);
+      pointer-events:none;
+    }
+    .mood-slot:after{
+      content:"photo d’inspiration";
+      position:absolute;
+      left:50%;top:50%;
+      transform:translate(-50%,-50%) rotate(-4deg);
+      width:max-content;
+      font:500 1.35rem "Caveat",cursive;
+      color:#8a847d;
+    }
+
+    /* INFOS */
+    .practical{background:var(--paper-warm)}
+    .info-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.2rem;
+      margin-top:2.5rem;
+    }
+    .info-card{
+      padding:1.6rem;
+      border:1px solid var(--line);
+      border-radius:2% 3% 2% 4% / 3% 2% 4% 2%;
+      background:rgba(255,255,255,.5);
+      position:relative;
+    }
+    .info-card:after{
+      content:"";
+      position:absolute;
+      inset:6px -5px -5px 6px;
+      border:1px solid rgba(45,45,45,.16);
+      pointer-events:none;
+    }
+    .info-card h3{
+      font:600 2rem "Caveat",cursive;
+      margin:.1rem 0 .55rem;
+    }
+    .info-card p{margin:0;color:#5f5b56}
+
+    /* RSVP */
+    .rsvp-grid{
+      display:grid;
+      grid-template-columns:.7fr 1.3fr;
+      gap:7vw;
+      align-items:start;
+    }
+    .form{
+      border:1px solid var(--line);
+      padding:1.6rem;
+      border-radius:2% 3% 2% 4% / 3% 2% 4% 2%;
+      background:rgba(255,255,255,.55);
+    }
+    .fields{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1rem;
+    }
+    .field.full{grid-column:1/-1}
+    label{
+      display:block;
+      margin-bottom:.4rem;
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      font-weight:600;
+      color:#5f5c57;
+    }
+    input,select,textarea{
+      width:100%;
+      min-height:46px;
+      border:1px solid var(--line);
+      background:transparent;
+      padding:.8rem .85rem;
+      border-radius:53% 47% 50% 50% / 8% 10% 7% 9%;
+      color:var(--ink);
+      outline:none;
+    }
+    textarea{min-height:110px;resize:vertical}
+    input:focus,select:focus,textarea:focus{
+      box-shadow:0 0 0 3px rgba(216,194,160,.24);
+    }
+    .submit{
+      width:100%;
+      margin-top:1rem;
+      min-height:48px;
+      border:1px solid var(--line);
+      background:rgba(216,194,160,.18);
+      border-radius:48% 52% 46% 54% / 55% 45% 53% 47%;
+      cursor:pointer;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-size:.72rem;
+    }
+    .status{
+      min-height:1.4rem;
+      margin-top:.7rem;
+      color:#5d5b56;
+      font-size:.9rem;
+    }
+
+    footer{
+      border-top:1px solid rgba(45,45,45,.3);
+      padding:3.2rem 0;
+      text-align:center;
+    }
+    .footer-names{font:600 2.5rem "Caveat",cursive}
+    .footer-meta{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .menu-btn{display:block}
+      .hero-grid,.rsvp-grid{grid-template-columns:1fr}
+      .hero-art{min-height:390px}
+      .info-grid{grid-template-columns:1fr}
+      .mood-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:620px){
+      .wrap{width:min(100% - 2rem,var(--max))}
+      .section{padding:4.7rem 0}
+      .hero{min-height:auto}
+      .hero-grid{padding:5.2rem 0 3rem}
+      .hero h1{font-size:clamp(4rem,19vw,6.6rem)}
+      .hero-art{min-height:330px}
+      .event{grid-template-columns:40px 1fr;gap:.35rem}
+      .timeline:before{left:17px}
+      .event:before{left:12px}
+      .event-time{grid-column:2}
+      .event-copy{grid-column:2}
+      .day-label,.map-link{margin-left:3.1rem}
+      .mood-grid{grid-template-columns:1fr 1fr}
+      .fields{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand">M & F</a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#programme">Programme</a>
+      <a href="#dresscode">Dress code</a>
+      <a href="#pratique">Infos pratiques</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#programme">Programme</a>
+  <a href="#dresscode">Dress code</a>
+  <a href="#pratique">Infos pratiques</a>
+  <a href="#rsvp">RSVP</a>
+</nav>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">Notre mariage</div>
+        <h1>Morwane<br>& Fatima</h1>
+        <div class="hero-meta">25 & 26 mai 2027 • Marrakech</div>
+        <p class="hero-note">Deux jours pour nous retrouver, célébrer et créer de beaux souvenirs ensemble.</p>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Illustration dessinée au trait de deux alliances et d'une arche">
+        <svg class="line-art" viewBox="0 0 500 500" role="img" aria-hidden="true">
+          <g fill="none" stroke="#2d2d2d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M105 356 C120 250 160 178 250 122 C340 180 380 252 395 356"/>
+            <path d="M129 356 C141 268 176 204 250 157 C324 205 358 269 371 356" opacity=".45"/>
+            <path d="M250 121 C244 190 244 255 250 355" opacity=".25"/>
+            <circle cx="217" cy="292" r="58"/>
+            <circle cx="286" cy="292" r="58"/>
+            <circle cx="217" cy="292" r="44" opacity=".38"/>
+            <circle cx="286" cy="292" r="44" opacity=".38"/>
+            <path d="M107 355 C163 344 203 345 250 354 C298 345 339 345 394 355"/>
+            <path d="M151 209 C134 196 125 178 128 160 C145 168 159 182 166 199"/>
+            <path d="M354 208 C371 195 379 177 376 159 C360 167 346 181 338 198"/>
+            <path d="M163 201 C149 186 147 168 153 153"/>
+            <path d="M337 200 C351 184 353 166 348 151"/>
+          </g>
+        </svg>
+        <div class="hero-caption">à Marrakech</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="sketch-line"></div></div>
+
+  <section class="section programme" id="programme">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">25 & 26 mai 2027</div>
+        <h2 class="section-title">Le programme</h2>
+        <p class="section-intro">Les horaires ci-dessous sont provisoires et seront remplacés dès que le déroulé final sera confirmé.</p>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="day-label">25 mai — Jour 1</div>
+
+        <div class="event">
+          <div class="event-time">16:00 • provisoire</div>
+          <div class="event-copy"><h3>Accueil des invités</h3><p>Premiers retrouvailles et installation.</p></div>
+        </div>
+        <div class="event">
+          <div class="event-time">17:00 • provisoire</div>
+          <div class="event-copy"><h3>Cérémonie / traditions</h3><p>Le détail définitif sera communiqué prochainement.</p></div>
+        </div>
+        <div class="event">
+          <div class="event-time">20:00 • provisoire</div>
+          <div class="event-copy"><h3>Dîner & soirée</h3><p>Un moment pour partager, dîner et célébrer ensemble.</p></div>
+        </div>
+
+        <div class="day-label">26 mai — Jour 2</div>
+
+        <div class="event">
+          <div class="event-time">16:00 • provisoire</div>
+          <div class="event-copy"><h3>Arrivée & cérémonie</h3><p>Accueil des invités et cérémonie.</p></div>
+        </div>
+        <div class="event">
+          <div class="event-time">18:00 • provisoire</div>
+          <div class="event-copy"><h3>Réception</h3><p>Cocktail et temps partagé avant le dîner.</p></div>
+        </div>
+        <div class="event">
+          <div class="event-time">20:30 • provisoire</div>
+          <div class="event-copy"><h3>Dîner & danse</h3><p>Dîner puis soirée dansante.</p></div>
+        </div>
+
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dar+Layana+Marrakech" target="_blank" rel="noopener">Voir l’itinéraire vers Dar Layana ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="dresscode">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Inspiration</div>
+        <h2 class="section-title">Dress code</h2>
+        <p class="section-intro">Champagne, ivoire, marron et blanc — une palette douce, lumineuse et naturelle.</p>
+
+        <div class="palette" aria-label="Palette du dress code">
+          <div class="color-chip"><span class="color-dot dot-champagne"></span>Champagne</div>
+          <div class="color-chip"><span class="color-dot dot-ivory"></span>Ivoire</div>
+          <div class="color-chip"><span class="color-dot dot-brown"></span>Marron</div>
+          <div class="color-chip"><span class="color-dot dot-white"></span>Blanc</div>
+        </div>
+      </div>
+
+      <div class="mood-grid reveal">
+        <div class="mood-slot" style="--r:-1deg"></div>
+        <div class="mood-slot" style="--r:.8deg"></div>
+        <div class="mood-slot" style="--r:-.4deg"></div>
+        <div class="mood-slot" style="--r:1.1deg"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section practical" id="pratique">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Pour votre séjour</div>
+        <h2 class="section-title">Infos pratiques</h2>
+      </div>
+
+      <div class="info-grid reveal">
+        <article class="info-card">
+          <div class="eyebrow">01</div>
+          <h3>Arriver à Marrakech</h3>
+          <p>Prévoyez idéalement votre arrivée avec un peu de marge avant le premier jour du mariage. Les informations de transport plus précises seront ajoutées ici.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="eyebrow">02</div>
+          <h3>Hébergements</h3>
+          <p>Une sélection d’adresses autour de Dar Layana et à Marrakech pourra être ajoutée ici dès qu’elle sera validée.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="eyebrow">03</div>
+          <h3>Déplacements</h3>
+          <p>Les options de transport entre l’aéroport, les hébergements et Dar Layana seront précisées prochainement.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="eyebrow">04</div>
+          <h3>À prévoir</h3>
+          <p>Documents de voyage, chaussures confortables, protection solaire et une couche légère pour le soir.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rsvp">
+    <div class="wrap rsvp-grid">
+      <div class="reveal">
+        <div class="eyebrow">Votre réponse</div>
+        <h2 class="section-title">RSVP</h2>
+        <p class="section-intro">Merci de nous confirmer votre présence et les informations utiles pour votre venue.</p>
+      </div>
+
+      <form class="form reveal" id="rsvpForm" action="https://formspree.io/f/xeajyaqe" method="POST">
+        <div class="fields">
+          <div class="field">
+            <label for="name">Nom / Prénom</label>
+            <input id="name" name="name" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="presence">Présence</label>
+            <select id="presence" name="presence" required>
+              <option value="">Choisir</option>
+              <option>Présent les deux jours</option>
+              <option>Uniquement le 25</option>
+              <option>Uniquement le 26</option>
+              <option>Absent</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="guests">Nombre d’accompagnants</label>
+            <input id="guests" name="guests" type="number" min="0" inputmode="numeric" placeholder="0">
+          </div>
+
+          <div class="field full">
+            <label for="diet">Régime alimentaire ou restrictions</label>
+            <textarea id="diet" name="diet" placeholder="Allergies, restrictions ou autre information utile"></textarea>
+          </div>
+        </div>
+
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px">
+
+        <button class="submit" type="submit">Envoyer ma réponse</button>
+        <div class="status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-names">Morwane & Fatima</div>
+    <div class="footer-meta">25 & 26 mai 2027 • Marrakech</div>
+  </div>
+</footer>
+
+<script>
+  const header=document.getElementById('header');
+  const menuBtn=document.getElementById('menuBtn');
+  const mobileMenu=document.getElementById('mobileMenu');
+
+  addEventListener('scroll',()=>{
+    header.classList.toggle('scrolled',scrollY>24);
+  },{passive:true});
+
+  menuBtn.addEventListener('click',()=>{
+    const open=mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',String(open));
+    mobileMenu.setAttribute('aria-hidden',String(!open));
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click',()=>{
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+      mobileMenu.setAttribute('aria-hidden','true');
+    });
+  });
+
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12});
+
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  const form=document.getElementById('rsvpForm');
+  const status=document.getElementById('formStatus');
+
+  form.addEventListener('submit',async(event)=>{
+    event.preventDefault();
+    status.textContent='Envoi…';
+
+    const submit=form.querySelector('button[type="submit"]');
+    submit.disabled=true;
+
+    try{
+      const response=await fetch(form.action,{
+        method:'POST',
+        body:new FormData(form),
+        headers:{Accept:'application/json'}
+      });
+
+      if(!response.ok) throw new Error('Form error');
+
+      form.reset();
+      status.textContent='Merci — votre réponse a bien été envoyée.';
+    }catch(error){
+      status.textContent='Un problème est survenu. Merci de réessayer.';
+    }finally{
+      submit.disabled=false;
+    }
+  });
+</script>
+
+</body>
+</html>
