@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f5f0e7">
+<title>Morwane & Tatta — Marrakech 2027</title>
+<meta name="description" content="Morwane & Tatta — 25 & 26 mai 2027 à Marrakech.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=DM+Sans:wght@300;400;500;600&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f5f0e7;
+  --cream:#fbf8f2;
+  --ink:#24251f;
+  --muted:#6e6b63;
+  --olive:#646d51;
+  --olive-dark:#46503d;
+  --olive-soft:#a3aa8f;
+  --indigo:#2d405e;
+  --sand:#d8cab7;
+  --champagne:#d4bea0;
+  --terra:#9d6d58;
+  --line:rgba(36,37,31,.2);
+  --serif:"Bodoni Moda",serif;
+  --sans:"DM Sans",sans-serif;
+  --hand:"Nanum Pen Script",cursive;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;overflow-x:hidden}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.12;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(var(--max),88vw);margin:auto}
+.section{padding:8rem 0}
+.kicker{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.hand{font:400 1.45rem/1 var(--hand);color:var(--olive-dark)}
+.display{font:500 clamp(3.4rem,7vw,7rem)/.9 var(--serif);letter-spacing:-.045em;margin:0}
+.smallcopy{font-size:.95rem;line-height:1.7;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}
+.reveal.show{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--champagne);outline-offset:4px}
+
+/* nav */
+.site-nav{position:absolute;inset:0 0 auto;z-index:30;color:white}
+.nav-inner{height:76px;display:flex;align-items:center}
+.brand{font:500 1.25rem var(--serif);text-decoration:none;letter-spacing:.03em}
+.nav-links{margin-left:auto;display:flex;gap:1.6rem}
+.nav-links a{text-decoration:none;font-size:.58rem;letter-spacing:.17em;text-transform:uppercase;font-weight:600}
+
+/* hero */
+.hero{height:100svh;min-height:650px;position:relative;color:white;display:flex;align-items:flex-end;overflow:hidden;background:#2b3028}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,18,14,.09),rgba(15,18,14,.06) 35%,rgba(15,18,14,.64) 100%)}
+.hero-copy{position:relative;z-index:2;width:100%;padding:0 0 6vh}
+.hero-meta{border-top:1px solid rgba(255,255,255,.5);padding-top:.95rem;display:flex;justify-content:space-between;gap:2rem;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase}
+.hero h1{font:500 clamp(4.8rem,10vw,9.5rem)/.84 var(--serif);letter-spacing:-.05em;margin:1.25rem 0 1.4rem}
+.hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:2rem}
+.hero-note{font:400 1.55rem/1 var(--hand);margin:0}
+.hero-rsvp{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;text-underline-offset:7px}
+
+/* meet */
+.meet{background:var(--cream)}
+.meet-head{text-align:center;margin-bottom:4.8rem}
+.meet-head .hand{display:inline-block;transform:rotate(-3deg);margin-bottom:.7rem}
+.meet-grid{display:grid;grid-template-columns:1fr 1.16fr 1fr;gap:3.4vw;align-items:center}
+.person h3{font:500 clamp(2.6rem,4.4vw,4.8rem)/.95 var(--serif);margin:0 0 1rem}
+.person p{font:500 clamp(1.15rem,1.7vw,1.5rem)/1.5 var(--serif);margin:0}
+.person em{display:block;margin-top:1rem;font:400 1.25rem/1.2 var(--hand);color:var(--olive-dark)}
+.person.right{text-align:right}
+.story-photo{position:relative}
+.story-photo:before{content:"nous";position:absolute;right:-1rem;top:-1.4rem;z-index:2;font:400 1.4rem var(--hand);color:var(--olive-dark);transform:rotate(7deg)}
+.story-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
+.story-photo:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(70,80,61,.35);z-index:-1}
+.us-line{max-width:760px;text-align:center;margin:5rem auto 0;font:500 clamp(1.7rem,3vw,2.55rem)/1.32 var(--serif)}
+.us-line span{display:block;margin-top:1rem;font:400 1.25rem var(--hand);color:var(--olive-dark)}
+
+/* save the date */
+.date-strip{background:var(--olive-dark);color:#f7f2e8;padding:3.2rem 0}
+.date-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}
+.date-title{font:500 clamp(2.7rem,5vw,5.3rem)/.95 var(--serif)}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(255,255,255,.3)}
+.count{padding:0 1rem;text-align:center;border-right:1px solid rgba(255,255,255,.3)}
+.count strong{display:block;font:500 2.5rem var(--serif)}
+.count span{font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;opacity:.75}
+
+/* chapters */
+.days{background:var(--paper)}
+.days-head{display:flex;justify-content:space-between;align-items:end;gap:4rem;border-bottom:1px solid var(--line);padding-bottom:1.2rem;margin-bottom:5rem}
+.days-head p{max-width:410px;margin:0}
+.chapter{display:grid;grid-template-columns:.85fr 1.15fr;min-height:600px;margin:0 0 2.4rem;overflow:hidden}
+.chapter-copy{padding:4.3rem;display:flex;flex-direction:column;justify-content:space-between}
+.chapter .num{font:500 clamp(5rem,8vw,8rem)/.8 var(--serif)}
+.chapter h3{font:500 clamp(2.9rem,5vw,5rem)/.92 var(--serif);margin:.8rem 0 1rem}
+.chapter p{max-width:440px;line-height:1.75;margin:0}
+.chapter ol{list-style:none;padding:0;margin:2.3rem 0 0;border-top:1px solid currentColor}
+.chapter li{display:flex;justify-content:space-between;gap:1rem;padding:.82rem 0;border-bottom:1px solid currentColor;font-size:.82rem}
+.chapter li span:first-child{font-weight:500}
+.chapter-media img{width:100%;height:100%;object-fit:cover}
+.chapter.indigo{background:var(--indigo);color:#f5efe5}
+.chapter.olive{background:var(--olive);color:#f8f3e9}
+.chapter.olive .chapter-copy{order:2}
+.chapter.olive .chapter-media{order:1}
+.palette{display:flex;gap:.45rem;margin-top:1.4rem}
+.dot{width:26px;height:26px;border:1px solid rgba(255,255,255,.35)}
+.dot.indigo{background:#263c5c}.dot.sand{background:#d4c6b3}.dot.terra{background:#9f6c58}
+.dot.olive{background:#72805d}.dot.ivory{background:#f1eadf}.dot.champagne{background:#d1b98e}
+
+/* venue */
+.place{background:var(--cream);text-align:center}
+.place .hand{display:inline-block;transform:rotate(-2deg)}
+.place h2{font:500 clamp(4rem,9vw,8rem)/.85 var(--serif);margin:1.2rem 0 .8rem}
+.gps{display:inline-block;margin-top:1.4rem;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;text-underline-offset:7px}
+
+/* Marrakech */
+.marrakech{background:#ded3c1}
+.marrakech-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:7vw;align-items:start}
+.travel-index{border-top:1px solid rgba(36,37,31,.35)}
+.travel-index details{border-bottom:1px solid rgba(36,37,31,.35);padding:1.2rem 0}
+.travel-index summary{list-style:none;cursor:pointer;font:500 1.55rem var(--serif);padding-right:2rem;position:relative}
+.travel-index summary::-webkit-details-marker{display:none}
+.travel-index summary:after{content:"+";position:absolute;right:0;font-family:var(--sans);font-weight:300}
+.travel-index details[open] summary:after{content:"–"}
+.travel-index p{margin:.8rem 0 0;line-height:1.7;color:#5f5b54}
+
+/* RSVP */
+.rsvp{background:#2f352b;color:#f6f0e5}
+.rsvp-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:7vw}
+.rsvp .hand{color:#d8c5a5}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.field.full{grid-column:1/-1}
+label{display:block;font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.45rem;font-weight:600}
+input,select,textarea{width:100%;border:0;border-bottom:1px solid rgba(247,242,232,.48);background:transparent;color:inherit;border-radius:0;padding:.78rem 0;outline:none}
+select option{color:#222}
+textarea{min-height:76px;resize:vertical}
+.send{grid-column:1/-1;margin-top:.5rem;border:1px solid #f6f0e5;background:#f6f0e5;color:#2f352b;padding:1rem;letter-spacing:.18em;text-transform:uppercase;font-size:.58rem;cursor:pointer}
+.status{grid-column:1/-1;min-height:1.2rem;font-size:.8rem;color:#ded6c8}
+
+/* faq */
+.faq{background:var(--cream)}
+.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:7vw}
+.questions{border-top:1px solid var(--line)}
+.questions details{padding:1.2rem 0;border-bottom:1px solid var(--line)}
+.questions summary{list-style:none;cursor:pointer;font:500 1.45rem var(--serif);position:relative;padding-right:2rem}
+.questions summary::-webkit-details-marker{display:none}
+.questions summary:after{content:"+";position:absolute;right:0;font-family:var(--sans);font-weight:300}
+.questions details[open] summary:after{content:"–"}
+.questions p{max-width:700px;line-height:1.7;color:var(--muted)}
+
+/* footer */
+footer{padding:5rem 0;text-align:center;background:var(--paper)}
+footer strong{display:block;font:500 clamp(2.8rem,5vw,4.6rem) var(--serif)}
+footer p{margin:.5rem 0 0;font:400 1.25rem var(--hand);color:var(--olive-dark)}
+
+@media(max-width:900px){
+  .section{padding:6rem 0}
+  .nav-links{display:none}
+  .meet-grid{grid-template-columns:1fr}
+  .person,.person.right{text-align:center}
+  .person{padding:0 7vw}
+  .story-photo{width:min(82vw,430px);margin:1rem auto}
+  .date-grid,.marrakech-grid,.rsvp-grid,.faq-grid{grid-template-columns:1fr}
+  .date-grid{gap:2rem}
+  .chapter{grid-template-columns:1fr}
+  .chapter-copy{padding:2.7rem}
+  .chapter-media{min-height:430px}
+  .chapter.olive .chapter-copy{order:1}
+  .chapter.olive .chapter-media{order:2}
+  .days-head{display:block}
+  .days-head p{margin-top:1rem}
+  .form{margin-top:2.5rem}
+}
+@media(max-width:560px){
+  .wrap{width:min(100% - 2rem,var(--max))}
+  .section{padding:4.8rem 0}
+  .hero{min-height:610px}
+  .hero h1{font-size:17vw}
+  .hero-meta span:first-child{display:none}
+  .hero-meta{justify-content:flex-end}
+  .hero-bottom{display:block}
+  .hero-rsvp{display:inline-block;margin-top:1.2rem}
+  .countdown{grid-template-columns:repeat(2,1fr);border-left:0}
+  .count{padding:1rem;border:1px solid rgba(255,255,255,.25);margin:-1px 0 0 -1px}
+  .chapter-copy{padding:2rem}
+  .chapter-media{min-height:360px}
+  .form{grid-template-columns:1fr}
+  .field.full,.send,.status{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">M&T</a>
+    <div class="nav-links">
+      <a href="#nous">Nous</a>
+      <a href="#programme">Programme</a>
+      <a href="#lieu">Lieu</a>
+      <a href="#sejour">Séjour</a>
+      <a href="#rsvp">RSVP</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/couple.jpeg" alt="Morwane et Tatta">
+  <div class="wrap hero-copy">
+    <div class="hero-meta"><span>Destination Marrakech</span><span>25 — 26 mai 2027</span></div>
+    <h1>Morwane<br>& Tatta</h1>
+    <div class="hero-bottom">
+      <p class="hero-note">deux jours, deux univers, une histoire.</p>
+      <a class="hero-rsvp" href="#rsvp">Répondre à l’invitation</a>
+    </div>
+  </div>
+</section>
+
+<section class="section meet" id="nous">
+  <div class="wrap">
+    <div class="meet-head reveal">
+      <div class="hand">un peu de nous</div>
+      <div class="kicker">Elle · Lui · Nous</div>
+    </div>
+    <div class="meet-grid reveal">
+      <div class="person">
+        <h3>Tatta</h3>
+        <p>Une idée aujourd’hui.<br>Une autre demain.<br>Le plan ? On verra en chemin.</p>
+        <em>Morwane a arrêté de poser des questions.</em>
+      </div>
+      <div class="story-photo">
+        <img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/couple.jpeg" alt="Morwane et Tatta ensemble">
+      </div>
+      <div class="person right">
+        <h3>Morwane</h3>
+        <p>Un plan. Un vrai.<br>De préférence prévu à l’avance.<br>Puis Tatta arrive.</p>
+        <em>Il avait pourtant tout organisé.</em>
+      </div>
+    </div>
+    <p class="us-line reveal">Elle improvise. Il avait un plan.<br><strong>Étrangement, ça fonctionne depuis des années.</strong><span>et on ne va surtout pas changer ça maintenant.</span></p>
+  </div>
+</section>
+
+<section class="date-strip">
+  <div class="wrap date-grid">
+    <div>
+      <div class="kicker">Save the date</div>
+      <div class="date-title">25 & 26 mai 2027<br>Marrakech</div>
+    </div>
+    <div class="countdown" aria-label="Compte à rebours avant le mariage">
+      <div class="count"><strong id="days">—</strong><span>jours</span></div>
+      <div class="count"><strong id="hours">—</strong><span>heures</span></div>
+      <div class="count"><strong id="minutes">—</strong><span>minutes</span></div>
+      <div class="count"><strong id="seconds">—</strong><span>secondes</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section days" id="programme">
+  <div class="wrap">
+    <div class="days-head reveal">
+      <div>
+        <div class="hand">25 + 26 mai</div>
+        <h2 class="display">Deux journées</h2>
+      </div>
+      <p class="smallcopy">Deux ambiances différentes, pensées comme deux chapitres d’une même célébration.</p>
+    </div>
+
+    <article class="chapter indigo reveal">
+      <div class="chapter-copy">
+        <div>
+          <div class="num">25</div>
+          <div class="kicker">Journée traditionnelle</div>
+          <h3>Indigo<br>& racines</h3>
+          <p>Une première journée tournée vers les traditions, la famille, la musique et les racines touarègues.</p>
+          <div class="palette" aria-label="Palette du 25 mai"><span class="dot indigo"></span><span class="dot sand"></span><span class="dot terra"></span></div>
+        </div>
+        <ol>
+          <li><span>Henné de Tatta</span><span>en journée</span></li>
+          <li><span>Henné de Morwane & traditions</span><span>puis</span></li>
+          <li><span>Musique · dîner · thé & douceurs</span><span>en soirée</span></li>
+        </ol>
+      </div>
+      <div class="chapter-media">
+        <img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/pool-sunset.jpeg" alt="">
+      </div>
+    </article>
+
+    <article class="chapter olive reveal">
+      <div class="chapter-copy">
+        <div>
+          <div class="num">26</div>
+          <div class="kicker">Cérémonie & réception</div>
+          <h3>Olive<br>& lumière</h3>
+          <p>Olivier, ivoire, champagne et beige clair. Une ambiance naturelle et élégante — sans couleur imposée aux invités.</p>
+          <div class="palette" aria-label="Palette du 26 mai"><span class="dot olive"></span><span class="dot ivory"></span><span class="dot champagne"></span></div>
+        </div>
+        <ol>
+          <li><span>Cérémonie laïque</span><span>après-midi</span></li>
+          <li><span>Cocktail & dîner</span><span>soirée</span></li>
+          <li><span>Gâteau · première danse · fête</span><span>jusqu’à minuit</span></li>
+        </ol>
+      </div>
+      <div class="chapter-media">
+        <img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/pool-main.jpeg" alt="">
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section place" id="lieu">
+  <div class="wrap reveal">
+    <div class="hand">notre lieu de célébration</div>
+    <h2>Dar Layyina</h2>
+    <div class="kicker">Marrakech</div>
+    <a class="gps" href="https://www.google.com/maps/search/?api=1&query=Dar+Layyina+Marrakech" target="_blank" rel="noopener">Voir l’itinéraire ↗</a>
+  </div>
+</section>
+
+<section class="section marrakech" id="sejour">
+  <div class="wrap marrakech-grid">
+    <div class="reveal">
+      <div class="hand">avant de faire vos valises</div>
+      <h2 class="display">Marrakech</h2>
+      <p class="smallcopy">Tout ce qui sera vraiment utile pour votre séjour sera regroupé ici, au même endroit.</p>
+    </div>
+    <div class="travel-index reveal">
+      <details>
+        <summary>Où dormir</summary>
+        <p>Nous regrouperons ici notre sélection d’hôtels recommandés pour les invités.</p>
+      </details>
+      <details>
+        <summary>Se déplacer</summary>
+        <p>Les informations pratiques pour rejoindre Dar Layyina et organiser les transferts seront réunies ici.</p>
+      </details>
+      <details>
+        <summary>Que faire à Marrakech</summary>
+        <p>Quelques adresses et idées que nous aimons : médina, souks, jardins, restaurants, cafés, hammams et rooftops.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section rsvp" id="rsvp">
+  <div class="wrap rsvp-grid">
+    <div class="reveal">
+      <div class="hand">on compte sur vous</div>
+      <h2 class="display">RSVP</h2>
+      <p class="smallcopy" style="color:#d9d2c7">Quelques informations seulement, pour bien organiser votre venue.</p>
+    </div>
+    <form class="form reveal" id="rsvpForm" action="https://formspree.io/f/xeajyaqe" method="POST">
+      <div class="field">
+        <label for="name">Nom & prénom</label>
+        <input id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="presence">Présence</label>
+        <select id="presence" name="presence" required>
+          <option value="">Choisir</option>
+          <option>Les deux jours</option>
+          <option>25 mai uniquement</option>
+          <option>26 mai uniquement</option>
+          <option>Je ne pourrai pas être présent(e)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="guest">Accompagnant(e)</label>
+        <input id="guest" name="guest">
+      </div>
+      <div class="field">
+        <label for="children">Enfants</label>
+        <input id="children" name="children" inputmode="numeric" placeholder="0">
+      </div>
+      <div class="field full">
+        <label for="allergies">Allergies ou restrictions</label>
+        <textarea id="allergies" name="allergies"></textarea>
+      </div>
+      <div class="field full">
+        <label for="transport">Transport</label>
+        <select id="transport" name="transport">
+          <option value="">Choisir</option>
+          <option>Oui</option>
+          <option>Non</option>
+          <option>À confirmer</option>
+        </select>
+      </div>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px">
+      <button class="send" type="submit">Envoyer ma réponse</button>
+      <div class="status" id="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <div class="hand">bon à savoir</div>
+      <h2 class="display">FAQ</h2>
+    </div>
+    <div class="questions reveal">
+      <details><summary>Où auront lieu les deux journées ?</summary><p>À Dar Layyina, à Marrakech.</p></details>
+      <details><summary>Les enfants sont-ils les bienvenus ?</summary><p>Oui. Indiquez-les simplement dans votre RSVP.</p></details>
+      <details><summary>Y a-t-il un dress code ?</summary><p>Non. Les couleurs du 25 et du 26 sont l’univers du mariage, pas une obligation pour vos tenues.</p></details>
+      <details><summary>Comment rejoindre le lieu ?</summary><p>L’itinéraire GPS est disponible dans la section Dar Layyina.</p></details>
+      <details><summary>Où dormir ?</summary><p>La sélection d’hôtels sera regroupée dans la rubrique Marrakech.</p></details>
+      <details><summary>Puis-je prendre des photos ?</summary><p>Oui, bien sûr.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Morwane & Tatta</strong>
+    <p>25 & 26 mai 2027 · Marrakech</p>
+  </div>
+</footer>
+
+<script>
+const target = new Date('2027-05-25T16:00:00+01:00').getTime();
+function tick(){
+  const d = Math.max(0,target-Date.now());
+  const day = Math.floor(d/86400000);
+  const hour = Math.floor((d%86400000)/3600000);
+  const min = Math.floor((d%3600000)/60000);
+  const sec = Math.floor((d%60000)/1000);
+  document.getElementById('days').textContent=day;
+  document.getElementById('hours').textContent=String(hour).padStart(2,'0');
+  document.getElementById('minutes').textContent=String(min).padStart(2,'0');
+  document.getElementById('seconds').textContent=String(sec).padStart(2,'0');
+}
+tick(); setInterval(tick,1000);
+
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      io.unobserve(entry.target);
+    }
+  })
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const form=document.getElementById('rsvpForm');
+const status=document.getElementById('status');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const button=form.querySelector('button[type=submit]');
+  status.textContent='Envoi…';
+  button.disabled=true;
+  try{
+    const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(!r.ok) throw new Error();
+    form.reset();
+    status.textContent='Merci — votre réponse a bien été envoyée.';
+  }catch(err){
+    status.textContent='Un problème est survenu. Merci de réessayer.';
+  }finally{
+    button.disabled=false;
+  }
+});
+</script>
+</body>
+</html>
