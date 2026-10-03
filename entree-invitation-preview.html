@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#d8c6a7"><meta name="robots" content="noindex,nofollow">
+<title>Morwane & Tatta — Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#d8c6a7;--sand2:#cdb894;--ivory:#f7f1e5;--ink:#29251f;--indigo:#26385f;--olive:#6f7353;--champ:#c8a875;--serif:"Cormorant Garamond",serif;--sans:"Montserrat",sans-serif}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--sand);color:var(--ink)}body{font-family:var(--sans);overflow-x:hidden}
+button{font:inherit;color:inherit}.stage{height:100svh;min-height:620px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 52% 38%,#e3d3b8 0,#d8c6a7 46%,#cbb48f 100%)}
+.stage:before{content:"";position:absolute;inset:0;opacity:.17;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
+.langs{position:absolute;z-index:30;top:max(20px,env(safe-area-inset-top));right:20px;display:flex;gap:13px;opacity:.56}
+.lang{border:0;background:none;padding:3px 0;font-size:9px;letter-spacing:.12em}.lang.active{opacity:1;border-bottom:1px solid currentColor}
+.intro{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:8vh 18px 5vh;transition:opacity .7s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.whisper{position:absolute;top:18.5%;font-size:9px;letter-spacing:.34em;text-transform:uppercase;opacity:.62}
+.envelope{width:min(88vw,410px);height:min(56vw,260px);max-height:260px;min-height:205px;position:relative;perspective:1000px;filter:drop-shadow(0 20px 24px rgba(66,48,27,.12))}
+.env-back{position:absolute;inset:0;background:linear-gradient(135deg,#eadbbf,#dcc8a7);border:1px solid rgba(83,63,37,.12)}
+.env-back:before,.env-back:after{content:"";position:absolute;bottom:0;width:58%;height:100%;background:#e5d3b4}
+.env-back:before{left:0;clip-path:polygon(0 22%,100% 72%,100% 100%,0 100%)}.env-back:after{right:0;clip-path:polygon(100% 22%,0 72%,0 100%,100% 100%)}
+.liner{position:absolute;left:0;right:0;top:0;height:72%;background:var(--indigo);clip-path:polygon(0 0,50% 83%,100% 0);opacity:0;transition:opacity .25s .15s}
+.liner:after{content:"ⵣ  ·  ⵎ  ·  ⵜ";position:absolute;inset:17% 0 auto;text-align:center;color:rgba(255,255,255,.15);font:400 16px serif;letter-spacing:1.15em}
+.flap{position:absolute;z-index:7;left:0;right:0;top:0;height:68%;transform-origin:50% 0;transform-style:preserve-3d;transition:transform 1.05s cubic-bezier(.22,.72,.22,1);background:linear-gradient(160deg,#ecdec4,#dbc5a1);clip-path:polygon(0 0,100% 0,50% 100%)}
+.seal{position:absolute;z-index:12;left:50%;top:48%;transform:translate(-50%,-50%);width:70px;height:70px;border:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#435682 0,#26385f 48%,#1b2948 100%);box-shadow:0 5px 9px rgba(29,37,61,.24),inset 0 0 0 2px rgba(225,214,184,.24),inset 0 0 0 8px rgba(255,255,255,.035);color:#f2e9d6;font:500 21px var(--serif);letter-spacing:.04em;cursor:pointer;transition:transform .35s,opacity .35s}
+.seal:after{content:"";position:absolute;inset:9px;border:1px solid rgba(239,229,207,.38);border-radius:50%;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.open-hint{position:absolute;bottom:14%;font-size:8px;letter-spacing:.27em;text-transform:uppercase;opacity:.48}
+.open-hint:after{content:"";display:block;width:1px;height:28px;margin:10px auto 0;background:linear-gradient(var(--ink),transparent);animation:pulse 1.7s infinite}@keyframes pulse{50%{transform:translateY(5px);opacity:.35}}
+.card{position:absolute;z-index:4;left:7%;right:7%;height:86%;bottom:-62%;background:var(--ivory);border:1px solid rgba(59,46,29,.09);transition:bottom 1.1s .52s cubic-bezier(.2,.75,.2,1),transform 1.1s .52s;overflow:hidden}
+.card:before{content:"";position:absolute;inset:0;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='p'%3E%3CfeTurbulence baseFrequency='.55' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)' opacity='.15'/%3E%3C/svg%3E")}
+.stage.open .seal{transform:translate(-50%,-50%) scale(.8);opacity:0}.stage.open .flap{transform:rotateX(178deg);z-index:2}.stage.open .liner{opacity:1}.stage.open .card{bottom:5%;z-index:9}.stage.open .open-hint,.stage.open .whisper{opacity:0}
+.stage.invited .intro{opacity:0;transform:translateY(18px);pointer-events:none}
+.invitation{position:absolute;z-index:20;inset:0;background:var(--ivory);opacity:0;pointer-events:none;transform:translateY(5%);transition:opacity .75s,transform .9s;overflow:auto}
+.stage.invited .invitation{opacity:1;pointer-events:auto;transform:none}
+.invite-sheet{min-height:100svh;position:relative;padding:10vh 7vw 8vh;overflow:hidden;background:linear-gradient(160deg,#f8f3e9 0,#f4eddf 70%,#efe4d1 100%)}
+.topline{display:flex;justify-content:space-between;align-items:flex-start;font-size:8px;letter-spacing:.23em;text-transform:uppercase;color:#625b50}
+.topline .coords{text-align:right;line-height:1.7}
+.photo-composition{position:relative;margin-top:7vh;height:58svh;min-height:390px;max-height:610px}
+.photo-frame{position:absolute;left:0;top:2%;width:73%;height:78%;padding:8px;background:#f8f1e4;box-shadow:0 10px 30px rgba(67,50,31,.08);transform:rotate(-1.2deg)}
+.photo-frame:before{content:"";position:absolute;width:64px;height:19px;background:rgba(197,169,119,.33);top:-10px;left:38%;transform:rotate(2deg);z-index:3}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center 54%}
+.names{position:absolute;z-index:5;left:8%;right:-3%;top:56%;font:500 clamp(3.55rem,17vw,6.5rem)/.72 var(--serif);letter-spacing:-.055em;color:var(--indigo)}
+.names span{display:block}.names .and{font-size:.55em;margin-left:48%;line-height:.7;color:var(--olive)}.names .tatta{margin-left:22%}
+.stamp{position:absolute;z-index:6;right:-3%;top:9%;width:108px;height:108px;border:1px solid rgba(111,115,83,.62);border-radius:50%;display:grid;place-content:center;text-align:center;transform:rotate(9deg);font-size:7px;line-height:1.8;letter-spacing:.16em;color:var(--olive);text-transform:uppercase}
+.stamp:before{content:"";position:absolute;inset:8px;border:1px solid rgba(111,115,83,.28);border-radius:50%}
+.dateblock{position:absolute;bottom:0;left:2%;display:flex;align-items:flex-end;gap:12px}.bigdate{font:500 45px/1 var(--serif);color:#3b352e}.datewords{font-size:8px;letter-spacing:.2em;line-height:1.8;text-transform:uppercase}
+.route{position:absolute;right:4%;bottom:5%;width:39%;height:70px}.route svg{width:100%;height:100%;overflow:visible}.route path{fill:none;stroke:var(--champ);stroke-width:1.2;stroke-dasharray:260;stroke-dashoffset:260;transition:stroke-dashoffset 1.8s 1s ease}.stage.invited .route path{stroke-dashoffset:0}
+.journey{margin-top:5vh;border:0;background:none;padding:0;font-size:9px;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:12px;cursor:pointer}.journey:after{content:"";height:1px;width:75px;background:linear-gradient(90deg,var(--champ),transparent)}
+.micro{position:absolute;right:5vw;bottom:3vh;color:rgba(38,56,95,.38);font-size:15px;letter-spacing:.5em}
+html[dir=rtl] body{font-family:"Noto Naskh Arabic",serif}html[dir=rtl] .langs{right:auto;left:20px}html[dir=rtl] .topline{direction:rtl}html[dir=rtl] .topline .coords{text-align:left}html[dir=rtl] .names{left:-3%;right:8%;font-family:"Noto Naskh Arabic",serif;letter-spacing:0;line-height:.95;text-align:right}html[dir=rtl] .names .and{margin-left:0;margin-right:48%}html[dir=rtl] .names .tatta{margin-left:0;margin-right:22%}html[dir=rtl] .stamp{right:auto;left:-3%}html[dir=rtl] .dateblock{left:auto;right:2%;direction:rtl}html[dir=rtl] .route{right:auto;left:4%;transform:scaleX(-1)}html[dir=rtl] .journey{direction:rtl}html[dir=rtl] .journey:after{background:linear-gradient(270deg,var(--champ),transparent)}
+@media(min-width:720px){.envelope{width:430px;height:270px}.card{left:12%;right:12%}.invite-sheet{width:min(680px,100%);margin:auto;padding-left:55px;padding-right:55px}.photo-composition{height:610px}.photo-frame{width:70%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition-duration:.01ms!important}}
+</style></head>
+<body>
+<main class="stage" id="stage">
+<div class="langs" aria-label="Language"><button class="lang active" data-lang="fr">FR</button><button class="lang" data-lang="en">EN</button><button class="lang" data-lang="ar">العربية</button></div>
+<section class="intro">
+<div class="whisper" data-t="whisper">UNE INVITATION POUR VOUS</div>
+<div class="envelope" id="envelope">
+<div class="env-back"></div><div class="liner"></div>
+<div class="card"></div><div class="flap"></div>
+<button class="seal" id="seal" aria-label="Ouvrir l'invitation">M&T</button>
+</div>
+<div class="open-hint" data-t="open">TOUCHEZ LE SCEAU</div>
+</section>
+<section class="invitation">
+<div class="invite-sheet">
+<div class="topline"><span data-t="place">MARRAKECH · MAROC</span><span class="coords">31.6295° N<br>7.9811° W</span></div>
+<div class="photo-composition">
+<div class="photo-frame"><img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/couple.jpeg" alt="Morwane et Tatta"></div>
+<div class="stamp"><span data-t="stamp">MARRAKECH<br>25—26 MAI<br>2027</span></div>
+<div class="names"><span>Morwane</span><span class="and">&</span><span class="tatta">Tatta</span></div>
+<div class="dateblock"><span class="bigdate">25—26</span><span class="datewords" data-t="date">MAI 2027<br>DAR LAYYINA</span></div>
+<div class="route"><svg viewBox="0 0 180 70"><path d="M3 55 C38 7,72 64,105 28 S152 15,176 2"/><circle cx="176" cy="2" r="3" fill="#c8a875"/></svg></div>
+</div>
+<button class="journey" data-t="journey">NOTRE VOYAGE COMMENCE ICI</button>
+<div class="micro">ⵣ</div>
+</div>
+</section>
+</main>
+<script>
+const text={
+fr:{whisper:"UNE INVITATION POUR VOUS",open:"TOUCHEZ LE SCEAU",place:"MARRAKECH · MAROC",stamp:"MARRAKECH<br>25—26 MAI<br>2027",date:"MAI 2027<br>DAR LAYYINA",journey:"NOTRE VOYAGE COMMENCE ICI",aria:"Ouvrir l’invitation"},
+en:{whisper:"AN INVITATION, JUST FOR YOU",open:"TOUCH THE SEAL",place:"MARRAKECH · MOROCCO",stamp:"MARRAKECH<br>MAY 25—26<br>2027",date:"MAY 2027<br>DAR LAYYINA",journey:"THE JOURNEY BEGINS HERE",aria:"Open the invitation"},
+ar:{whisper:"دعوة خاصة لكم",open:"المسوا الختم",place:"مراكش · المغرب",stamp:"مراكش<br>25—26 مايو<br>2027",date:"مايو 2027<br>دار ليانا",journey:"من هنا تبدأ رحلتنا",aria:"افتحوا الدعوة"}};
+const stage=document.getElementById("stage"),seal=document.getElementById("seal");
+function lang(l){document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";document.querySelectorAll("[data-t]").forEach(e=>e.innerHTML=text[l][e.dataset.t]);document.querySelectorAll(".lang").forEach(b=>b.classList.toggle("active",b.dataset.lang===l));seal.setAttribute("aria-label",text[l].aria);localStorage.setItem("mt-entry-lang",l)}
+document.querySelectorAll(".lang").forEach(b=>b.onclick=()=>lang(b.dataset.lang));
+seal.onclick=()=>{if(stage.classList.contains("open"))return;stage.classList.add("open");setTimeout(()=>stage.classList.add("invited"),1700)};
+document.querySelector(".card").onclick=()=>stage.classList.add("invited");
+lang(localStorage.getItem("mt-entry-lang")||"fr");
+</script></body></html>
