@@ -68,22 +68,12 @@ img{max-width:100%;display:block}
 .hero-note{font:400 1.55rem/1 var(--hand);margin:0}
 .hero-rsvp{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;text-underline-offset:7px}
 
-/* meet */
-.meet{background:var(--cream)}
-.meet-head{text-align:center;margin-bottom:4.8rem}
-.meet-head .hand{display:inline-block;transform:rotate(-3deg);margin-bottom:.7rem}
-.meet-grid{display:grid;grid-template-columns:1fr 1.16fr 1fr;gap:3.4vw;align-items:center}
-.person h3{font:500 clamp(2.6rem,4.4vw,4.8rem)/.95 var(--serif);margin:0 0 1rem}
-.person p{font:500 clamp(1.15rem,1.7vw,1.5rem)/1.5 var(--serif);margin:0}
-.person em{display:block;margin-top:1rem;font:400 1.25rem/1.2 var(--hand);color:var(--olive-dark)}
-.person.right{text-align:right}
-.story-photo{position:relative}
-.story-photo:before{content:"nous";position:absolute;right:-1rem;top:-1.4rem;z-index:2;font:400 1.4rem var(--hand);color:var(--olive-dark);transform:rotate(7deg)}
-.story-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
-.story-photo:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(70,80,61,.35);z-index:-1}
-.us-line{max-width:760px;text-align:center;margin:5rem auto 0;font:500 clamp(1.7rem,3vw,2.55rem)/1.32 var(--serif)}
-.us-line span{display:block;margin-top:1rem;font:400 1.25rem var(--hand);color:var(--olive-dark)}
-
+/* invitation */
+.meet{background:var(--cream);text-align:center}
+.invite-note{max-width:660px;margin:auto}
+.invite-note .hand{font-size:2.2rem}
+.invite-note p{font:500 clamp(1.05rem,1.8vw,1.35rem)/1.65 var(--serif);margin:1.3rem auto}
+.invite-note .signature{font:400 1.7rem var(--hand);color:var(--olive-dark)}
 /* save the date */
 .date-strip{background:var(--olive-dark);color:#f7f2e8;padding:3.2rem 0}
 .date-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}
@@ -93,28 +83,17 @@ img{max-width:100%;display:block}
 .count strong{display:block;font:500 2.5rem var(--serif)}
 .count span{font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;opacity:.75}
 
-/* chapters */
+/* details */
 .days{background:var(--paper)}
-.days-head{display:flex;justify-content:space-between;align-items:end;gap:4rem;border-bottom:1px solid var(--line);padding-bottom:1.2rem;margin-bottom:5rem}
-.days-head p{max-width:410px;margin:0}
-.chapter{display:grid;grid-template-columns:.85fr 1.15fr;min-height:600px;margin:0 0 2.4rem;overflow:hidden}
-.chapter-copy{padding:4.3rem;display:flex;flex-direction:column;justify-content:space-between}
-.chapter .num{font:500 clamp(5rem,8vw,8rem)/.8 var(--serif)}
-.chapter h3{font:500 clamp(2.9rem,5vw,5rem)/.92 var(--serif);margin:.8rem 0 1rem}
-.chapter p{max-width:440px;line-height:1.75;margin:0}
-.chapter ol{list-style:none;padding:0;margin:2.3rem 0 0;border-top:1px solid currentColor}
-.chapter li{display:flex;justify-content:space-between;gap:1rem;padding:.82rem 0;border-bottom:1px solid currentColor;font-size:.82rem}
-.chapter li span:first-child{font-weight:500}
-.chapter-media img{width:100%;height:100%;object-fit:cover}
-.chapter.indigo{background:var(--indigo);color:#f5efe5}
-.chapter.olive{background:var(--olive);color:#f8f3e9}
-.chapter.olive .chapter-copy{order:2}
-.chapter.olive .chapter-media{order:1}
-.palette{display:flex;gap:.45rem;margin-top:1.4rem}
-.dot{width:26px;height:26px;border:1px solid rgba(255,255,255,.35)}
-.dot.indigo{background:#263c5c}.dot.sand{background:#d4c6b3}.dot.terra{background:#9f6c58}
-.dot.olive{background:#72805d}.dot.ivory{background:#f1eadf}.dot.champagne{background:#d1b98e}
-
+.days-head{text-align:center;margin-bottom:4rem}
+.schedule-card{max-width:760px;margin:0 auto 5rem;padding:2.4rem 3rem;background:#f8f1e5;color:#2d2924;border:1px solid #cbbda9;box-shadow:10px 12px 0 rgba(71,57,42,.12)}
+.schedule-card h3{font:400 3rem var(--hand);text-align:center;margin:.2rem 0 1.5rem}
+.schedule-row{display:grid;grid-template-columns:75px 1fr;padding:.75rem 0;border-bottom:1px solid #cbbda9;font:500 .95rem var(--serif)}
+.day25{background:var(--indigo);color:#f6f0e7;padding:5rem 0}.day26{background:#3a281f;color:#f8efe3;padding:5rem 0}
+.day-intro{display:grid;grid-template-columns:.7fr 1.3fr;gap:5vw;align-items:start}
+.day-intro h3{font:500 clamp(3.4rem,7vw,6.8rem)/.9 var(--serif);margin:0}
+.day-intro p{line-height:1.75;margin:0}.palette{display:flex;gap:.5rem;margin-top:1.4rem}.dot{width:27px;height:27px;border:1px solid #ffffff66}
+.dot.indigo{background:#26365f}.dot.sand{background:#d7c5a9}.dot.chocolate{background:#3b241c}.dot.cognac{background:#9a552f}.dot.bordeaux{background:#6e2029}.dot.champagne{background:#d5b995}.dot.olive{background:#4e5736}.dot.nude{background:#d9ad99}
 /* venue */
 .place{background:var(--cream);text-align:center}
 .place .hand{display:inline-block;transform:rotate(-2deg)}
@@ -162,6 +141,7 @@ footer strong{display:block;font:500 clamp(2.8rem,5vw,4.6rem) var(--serif)}
 footer p{margin:.5rem 0 0;font:400 1.25rem var(--hand);color:var(--olive-dark)}
 
 @media(max-width:900px){
+  .day-intro{grid-template-columns:1fr;gap:2rem}
   .section{padding:6rem 0}
   .nav-links{display:none}
   .meet-grid{grid-template-columns:1fr}
@@ -180,6 +160,7 @@ footer p{margin:.5rem 0 0;font:400 1.25rem var(--hand);color:var(--olive-dark)}
   .form{margin-top:2.5rem}
 }
 @media(max-width:560px){
+  .schedule-card{padding:1.5rem 1.2rem;box-shadow:6px 7px 0 rgba(71,57,42,.12)}
   .wrap{width:min(100% - 2rem,var(--max))}
   .section{padding:4.8rem 0}
   .hero{min-height:610px}
@@ -229,30 +210,12 @@ footer p{margin:.5rem 0 0;font:400 1.25rem var(--hand);color:var(--olive-dark)}
 </section>
 
 <section class="section meet" id="nous">
-  <div class="wrap">
-    <div class="meet-head reveal">
-      <div class="hand">un peu de nous</div>
-      <div class="kicker">Elle · Lui · Nous</div>
-    </div>
-    <div class="meet-grid reveal">
-      <div class="person">
-        <h3>Tatta</h3>
-        <p>Une idée aujourd’hui.<br>Une autre demain.<br>Le plan ? On verra en chemin.</p>
-        <em>Morwane a arrêté de poser des questions.</em>
-      </div>
-      <div class="story-photo">
-        <img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/couple.jpeg" alt="Morwane et Tatta ensemble">
-      </div>
-      <div class="person right">
-        <h3>Morwane</h3>
-        <p>Un plan. Un vrai.<br>De préférence prévu à l’avance.<br>Puis Tatta arrive.</p>
-        <em>Il avait pourtant tout organisé.</em>
-      </div>
-    </div>
-    <p class="us-line reveal">Elle improvise. Il avait un plan.<br><strong>Étrangement, ça fonctionne depuis des années.</strong><span>et on ne va surtout pas changer ça maintenant.</span></p>
+  <div class="wrap invite-note reveal">
+    <div class="hand">Vous êtes invités</div>
+    <p>Nous sommes heureux de vous retrouver à Marrakech pour célébrer ces deux journées avec nous. Nous avons réuni ici tout ce qu’il vous faut pour préparer votre venue simplement.</p>
+    <div class="signature">Morwane & Tatta</div>
   </div>
 </section>
-
 <section class="date-strip">
   <div class="wrap date-grid">
     <div>
@@ -270,56 +233,31 @@ footer p{margin:.5rem 0 0;font:400 1.25rem var(--hand);color:var(--olive-dark)}
 
 <section class="section days" id="programme">
   <div class="wrap">
-    <div class="days-head reveal">
-      <div>
-        <div class="hand">25 + 26 mai</div>
-        <h2 class="display">Deux journées</h2>
-      </div>
-      <p class="smallcopy">Deux ambiances différentes, pensées comme deux chapitres d’une même célébration.</p>
+    <div class="days-head reveal"><div class="hand">les détails</div><h2 class="display">Programme</h2></div>
+    <div class="schedule-card reveal">
+      <h3>25 mai</h3>
+      <div class="schedule-row"><span>09:00</span><span>Henné de Tatta</span></div>
+      <div class="schedule-row"><span>16:00</span><span>Arrivée des invités</span></div>
+      <div class="schedule-row"><span>17:00</span><span>Henné de Morwane</span></div>
+      <div class="schedule-row"><span>18:00</span><span>Tindé, guitare & célébration</span></div>
+      <div class="schedule-row"><span>20:30</span><span>Dîner</span></div>
+      <div class="schedule-row"><span>00:00</span><span>Tadwat</span></div>
     </div>
-
-    <article class="chapter indigo reveal">
-      <div class="chapter-copy">
-        <div>
-          <div class="num">25</div>
-          <div class="kicker">Journée traditionnelle</div>
-          <h3>Indigo<br>& racines</h3>
-          <p>Une première journée tournée vers les traditions, la famille, la musique et les racines touarègues.</p>
-          <div class="palette" aria-label="Palette du 25 mai"><span class="dot indigo"></span><span class="dot sand"></span><span class="dot terra"></span></div>
-        </div>
-        <ol>
-          <li><span>Henné de Tatta</span><span>en journée</span></li>
-          <li><span>Henné de Morwane & traditions</span><span>puis</span></li>
-          <li><span>Musique · dîner · thé & douceurs</span><span>en soirée</span></li>
-        </ol>
-      </div>
-      <div class="chapter-media">
-        <img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/pool-sunset.jpeg" alt="">
-      </div>
-    </article>
-
-    <article class="chapter olive reveal">
-      <div class="chapter-copy">
-        <div>
-          <div class="num">26</div>
-          <div class="kicker">Cérémonie & réception</div>
-          <h3>Olive<br>& lumière</h3>
-          <p>Olivier, ivoire, champagne et beige clair. Une ambiance naturelle et élégante — sans couleur imposée aux invités.</p>
-          <div class="palette" aria-label="Palette du 26 mai"><span class="dot olive"></span><span class="dot ivory"></span><span class="dot champagne"></span></div>
-        </div>
-        <ol>
-          <li><span>Cérémonie laïque</span><span>après-midi</span></li>
-          <li><span>Cocktail & dîner</span><span>soirée</span></li>
-          <li><span>Gâteau · première danse · fête</span><span>jusqu’à minuit</span></li>
-        </ol>
-      </div>
-      <div class="chapter-media">
-        <img src="https://raw.githubusercontent.com/Morwane-Fatima-Mariage2027/morwane-fatima-destination-weddind/main/pool-main.jpeg" alt="">
-      </div>
-    </article>
   </div>
+  <div class="day25"><div class="wrap day-intro reveal"><div><div class="kicker">25 mai</div><h3>Indigo<br>& sable</h3><div class="palette"><span class="dot indigo"></span><span class="dot sand"></span></div></div><p>Une journée autour des traditions, de la famille, du tindé et des racines touareg.</p></div></div>
+  <div class="wrap" style="padding-top:5rem">
+    <div class="schedule-card reveal">
+      <h3>26 mai</h3>
+      <div class="schedule-row"><span>17:00</span><span>Arrivée des invités</span></div>
+      <div class="schedule-row"><span>18:00</span><span>Cérémonie laïque</span></div>
+      <div class="schedule-row"><span>19:00</span><span>Cocktail & violon</span></div>
+      <div class="schedule-row"><span>20:30</span><span>Dîner</span></div>
+      <div class="schedule-row"><span>22:00</span><span>Wedding cake</span></div>
+      <div class="schedule-row"><span>22:30</span><span>Soirée & DJ</span></div>
+    </div>
+  </div>
+  <div class="day26"><div class="wrap day-intro reveal"><div><div class="kicker">26 mai</div><h3>Cérémonie<br>& réception</h3><div class="palette"><span class="dot chocolate"></span><span class="dot cognac"></span><span class="dot bordeaux"></span><span class="dot champagne"></span><span class="dot olive"></span><span class="dot nude"></span></div></div><p>Une palette profonde et satinée : chocolat, cognac, terracotta, bordeaux, champagne, nude et verts naturels.</p></div></div>
 </section>
-
 <section class="section place" id="lieu">
   <div class="wrap reveal">
     <div class="hand">notre lieu de célébration</div>
