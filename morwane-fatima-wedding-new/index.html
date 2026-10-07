@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6f7657">
+  <meta name="description" content="Morwane & Fatima — mariage à Marrakech les 25 et 26 mai 2027, Villa Dar Layyina.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Morwane & Fatima — Marrakech 2027">
+  <meta property="og:description" content="Notre invitation de mariage — 25 & 26 mai 2027 à Marrakech.">
+  <title>Morwane & Fatima — Marrakech 2027</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Libre+Caslon+Display&family=Montserrat:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script defer src="translations/content.js"></script>
+  <script defer src="scripts/app.js"></script>
+</head>
+<body class="is-locked">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <div class="entry" id="entry" role="dialog" aria-modal="true" aria-labelledby="entryTitle">
+    <div class="entry-language" aria-label="Langue">
+      <button type="button" data-lang="fr" class="lang-button is-active">FR</button>
+      <button type="button" data-lang="en" class="lang-button">EN</button>
+      <button type="button" data-lang="ar" class="lang-button">AR</button>
+    </div>
+    <div class="entry-inner">
+      <p class="entry-kicker" data-i18n="entry.kicker">Marrakech · 25—26 mai 2027</p>
+      <div class="envelope" aria-hidden="true">
+        <div class="envelope-back"></div>
+        <div class="envelope-card">
+          <span class="envelope-monogram">M &amp; F</span>
+          <span class="tifinagh">ⵣ</span>
+        </div>
+        <div class="envelope-left"></div>
+        <div class="envelope-right"></div>
+        <div class="envelope-bottom"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-seal">M&amp;F</div>
+      </div>
+      <h1 id="entryTitle" class="sr-only">Morwane &amp; Fatima</h1>
+      <button class="button button-olive entry-button" id="openInvitation" type="button" data-i18n="entry.open">OUVRIR L’INVITATION</button>
+    </div>
+  </div>
+
+  <div class="site" id="site" aria-hidden="true">
+    <header class="site-header">
+      <div class="language-switcher" aria-label="Langue">
+        <button type="button" data-lang="fr" class="lang-button is-active">FR</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-lang="en" class="lang-button">EN</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-lang="ar" class="lang-button">AR</button>
+      </div>
+    </header>
+
+    <main id="main" class="paper">
+      <section class="section cover reveal" aria-labelledby="coverTitle">
+        <img class="illustration illustration-villa" src="assets/illustrations/villa.svg" alt="" aria-hidden="true">
+        <p class="eyebrow" data-i18n="cover.kicker">NOUS NOUS MARIONS</p>
+        <h2 id="coverTitle" class="script-title names-title"><span>Morwane</span><span class="ampersand">&amp;</span><span>Fatima</span></h2>
+        <p class="cover-place" data-i18n="cover.place">Marrakech</p>
+        <p class="cover-date" data-i18n="cover.date">25 — 26 mai 2027</p>
+        <span class="tiny-mark" aria-hidden="true">ⵣ</span>
+      </section>
+
+      <section class="section photo-section reveal" aria-labelledby="photoTitle">
+        <div class="photo-frame" id="photoFrame">
+          <img id="couplePhoto" src="assets/images/couple-original.jpg" alt="Morwane et Fatima" loading="lazy">
+          <div class="photo-missing" id="photoMissing" hidden>
+            <span class="paper-corner" aria-hidden="true"></span>
+            <p data-i18n="photo.placeholder">Photo originale à ajouter</p>
+          </div>
+        </div>
+        <p class="eyebrow" data-i18n="photo.kicker">LE MARIAGE DE</p>
+        <h2 id="photoTitle" class="script-title section-script">Morwane &amp; Fatima</h2>
+      </section>
+
+      <section class="section countdown-section reveal" aria-labelledby="countdownTitle">
+        <div class="ornament-line" aria-hidden="true"><span></span></div>
+        <h2 id="countdownTitle" class="section-title" data-i18n="countdown.title">LE COMPTE À REBOURS</h2>
+        <div class="countdown" id="countdown" aria-label="Compte à rebours jusqu’au 25 mai 2027">
+          <div><strong id="days">000</strong><span data-i18n="countdown.days">JOURS</span></div>
+          <div><strong id="hours">00</strong><span data-i18n="countdown.hours">HEURES</span></div>
+          <div><strong id="minutes">00</strong><span data-i18n="countdown.minutes">MINUTES</span></div>
+          <div><strong id="seconds">00</strong><span data-i18n="countdown.seconds">SECONDES</span></div>
+        </div>
+      </section>
+
+      <section class="section calendar-section reveal" aria-labelledby="calendarTitle">
+        <h2 id="calendarTitle" class="script-title section-script" data-i18n="calendar.title">Mai 2027</h2>
+        <div class="calendar" aria-label="Calendrier de mai 2027">
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span data-i18n="calendar.mo">L</span><span data-i18n="calendar.tu">M</span><span data-i18n="calendar.we">M</span><span data-i18n="calendar.th">J</span><span data-i18n="calendar.fr">V</span><span data-i18n="calendar.sa">S</span><span data-i18n="calendar.su">D</span>
+          </div>
+          <div class="calendar-grid">
+            <span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span>1</span><span>2</span>
+            <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+            <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+            <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+            <span>24</span><span class="wedding-day day-25">25</span><span class="wedding-day day-26">26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+            <span>31</span>
+          </div>
+        </div>
+        <p class="calendar-note" data-i18n="calendar.note">25 &amp; 26 · Marrakech</p>
+      </section>
+
+      <section class="section venue-section olive-band reveal" aria-labelledby="venueTitle">
+        <img class="illustration illustration-small" src="assets/illustrations/olive.svg" alt="" aria-hidden="true">
+        <p class="eyebrow light" data-i18n="venue.kicker">NOTRE LIEU DE RÉCEPTION</p>
+        <h2 id="venueTitle" class="script-title section-script light" data-i18n="venue.title">Le lieu</h2>
+        <p class="venue-name">Villa Dar Layyina</p>
+        <address>Sidi Abdellah Ghiyat<br>Marrakech, Maroc</address>
+        <a class="button button-ivory" href="https://www.google.com/maps/search/?api=1&query=Villa+Dar+Layyina+Sidi+Abdellah+Ghiyat+Marrakech+Maroc" target="_blank" rel="noopener" data-i18n="venue.route">VOIR L’ITINÉRAIRE</a>
+      </section>
+
+      <section class="section program-section reveal" aria-labelledby="programTitle">
+        <p class="eyebrow" data-i18n="program.kicker">DEUX JOURS · DEUX UNIVERS</p>
+        <h2 id="programTitle" class="script-title section-script" data-i18n="program.title">Programme</h2>
+
+        <article class="timeline-day roots-day" aria-labelledby="rootsTitle">
+          <div class="day-heading">
+            <p>25 MAI 2027</p>
+            <h3 id="rootsTitle" data-i18n="program.roots">RACINES</h3>
+            <span class="day-rule"></span>
+          </div>
+          <ol class="timeline timeline-indigo">
+            <li><time></time><span data-i18n="program.brideHenna">Henné de la mariée</span></li>
+            <li><time>17:00</time><span data-i18n="program.groomHenna">Henné du marié</span></li>
+            <li><time>18:00</time><span data-i18n="program.arrival">Arrivée des invités</span></li>
+            <li><time></time><span data-i18n="program.families">Accueil des familles</span></li>
+            <li><time></time><span data-i18n="program.tuaregEvening">Soirée traditionnelle touarègue</span></li>
+            <li><time></time><span data-i18n="program.dinner">Dîner</span></li>
+            <li><time></time><span data-i18n="program.music">Musique / guitare touarègue</span></li>
+            <li><time></time><span data-i18n="program.tea">Thé &amp; pâtisseries</span></li>
+          </ol>
+          <img class="illustration illustration-desert" src="assets/illustrations/desert.svg" alt="" aria-hidden="true">
+        </article>
+
+        <article class="timeline-day celebration-day" aria-labelledby="celebrationTitle">
+          <div class="day-heading">
+            <p>26 MAI 2027</p>
+            <h3 id="celebrationTitle" data-i18n="program.celebration">LA CÉLÉBRATION</h3>
+            <span class="day-rule"></span>
+          </div>
+          <ol class="timeline timeline-olive">
+            <li><time></time><span data-i18n="program.ceremony">Cérémonie</span></li>
+            <li><time></time><span data-i18n="program.cocktail">Cocktail / accueil</span></li>
+            <li><time></time><span data-i18n="program.seatedDinner">Dîner à table</span></li>
+            <li><time></time><span data-i18n="program.speeches">Discours</span></li>
+            <li><time></time><span data-i18n="program.firstDance">Première danse</span></li>
+            <li><time></time><span data-i18n="program.dj">DJ &amp; soirée</span></li>
+          </ol>
+          <p class="program-note" data-i18n="program.note">Les horaires non confirmés seront ajoutés dès qu’ils seront fixés.</p>
+        </article>
+      </section>
+
+      <section class="section dress-section reveal" aria-labelledby="dressTitle">
+        <img class="illustration illustration-attire" src="assets/illustrations/attire.svg" alt="" aria-hidden="true">
+        <h2 id="dressTitle" class="script-title section-script" data-i18n="dress.title">Dress Code</h2>
+        <div class="attire-row">
+          <div class="attire-copy">
+            <p class="attire-date">25 MAI</p>
+            <h3 data-i18n="dress.day1">Traditionnel / élégant</h3>
+          </div>
+          <div class="palette" aria-label="Indigo, sable, argent"><span class="swatch indigo"></span><span class="swatch sand"></span><span class="swatch silver"></span></div>
+        </div>
+        <div class="attire-row">
+          <div class="attire-copy">
+            <p class="attire-date">26 MAI</p>
+            <h3 data-i18n="dress.day2">Élégant</h3>
+          </div>
+          <div class="palette" aria-label="Olive, ivoire, champagne"><span class="swatch olive"></span><span class="swatch ivory"></span><span class="swatch champagne"></span></div>
+        </div>
+      </section>
+
+      <section class="section practical-section reveal" aria-labelledby="practicalTitle">
+        <p class="eyebrow" data-i18n="practical.kicker">WEDDING DETAILS</p>
+        <h2 id="practicalTitle" class="script-title section-script" data-i18n="practical.title">Informations pratiques</h2>
+        <dl class="details-list">
+          <div><dt data-i18n="practical.accommodation">Hébergement</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.transport">Transport</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.arrival">Arrivée à Marrakech</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.passport">Passeport / visa</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.weather">Météo</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.currency">Monnaie</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.mobility">Déplacements</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.parking">Stationnement</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.children">Enfants</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.photos">Photos</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+          <div><dt data-i18n="practical.indoorOutdoor">Cérémonie intérieure / extérieure</dt><dd data-i18n="practical.pending">Informations à venir.</dd></div>
+        </dl>
+      </section>
+
+      <section class="section travel-section olive-wash reveal" aria-labelledby="travelTitle">
+        <p class="eyebrow" data-i18n="travel.kicker">CARNET DE MARRAKECH</p>
+        <h2 id="travelTitle" class="script-title section-script" data-i18n="travel.title">Prolonger le voyage</h2>
+        <nav class="travel-tabs" aria-label="Catégories Marrakech">
+          <button type="button" class="travel-tab is-active" data-travel="discover" data-i18n="travel.discover">À découvrir</button>
+          <button type="button" class="travel-tab" data-travel="restaurants" data-i18n="travel.restaurants">Restaurants</button>
+          <button type="button" class="travel-tab" data-travel="cafes" data-i18n="travel.cafes">Cafés</button>
+          <button type="button" class="travel-tab" data-travel="souks" data-i18n="travel.souks">Souks &amp; artisanat</button>
+          <button type="button" class="travel-tab" data-travel="hammams" data-i18n="travel.hammams">Hammams</button>
+          <button type="button" class="travel-tab" data-travel="excursions" data-i18n="travel.excursions">Excursions</button>
+          <button type="button" class="travel-tab" data-travel="clothing" data-i18n="travel.clothing">Vêtements traditionnels</button>
+        </nav>
+        <div id="travelContent" class="travel-content" aria-live="polite">
+          <p data-i18n="travel.pending">Nos adresses sélectionnées seront ajoutées ici.</p>
+        </div>
+      </section>
+
+      <section class="section story-section reveal" aria-labelledby="storyTitle">
+        <p class="eyebrow" data-i18n="story.kicker">QUELQUES LIGNES</p>
+        <h2 id="storyTitle" class="script-title section-script" data-i18n="story.title">Notre histoire</h2>
+        <div class="story-line" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="story-copy">
+          <p data-i18n="story.one">Deux chemins.</p>
+          <p data-i18n="story.two">Des racines qui voyagent avec nous.</p>
+          <p data-i18n="story.three">Et Marrakech, les 25 &amp; 26 mai 2027.</p>
+        </div>
+        <span class="story-mark" aria-hidden="true">ⵣ</span>
+      </section>
+
+      <section class="section rsvp-section reveal" aria-labelledby="rsvpTitle">
+        <div class="response-card">
+          <p class="eyebrow" data-i18n="rsvp.kicker">CARTE-RÉPONSE</p>
+          <h2 id="rsvpTitle" class="script-title section-script">RSVP</h2>
+          <p class="rsvp-question" data-i18n="rsvp.question">Serez-vous des nôtres ?</p>
+          <p class="rsvp-deadline"><span data-i18n="rsvp.deadline">Date limite</span> · 10 décembre</p>
+
+          <form id="rsvpForm" action="https://formspree.io/f/xeajyaqe" method="POST">
+            <input type="hidden" name="language" id="formLanguage" value="fr">
+
+            <fieldset class="form-step is-active" data-step="1">
+              <legend data-i18n="rsvp.step1">Votre réponse</legend>
+              <div class="choice-row">
+                <label><input type="radio" name="presence" value="oui" required><span data-i18n="rsvp.yes">Oui, avec joie</span></label>
+                <label><input type="radio" name="presence" value="non" required><span data-i18n="rsvp.no">Non, malheureusement</span></label>
+              </div>
+              <div class="form-grid">
+                <label><span data-i18n="rsvp.firstName">Prénom</span><input type="text" name="prenom" autocomplete="given-name" required></label>
+                <label><span data-i18n="rsvp.lastName">Nom</span><input type="text" name="nom" autocomplete="family-name" required></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-step" data-step="2" hidden>
+              <legend data-i18n="rsvp.step2">Votre venue</legend>
+              <label><span data-i18n="rsvp.companion">Accompagnant</span><input type="text" name="accompagnant"></label>
+              <label><span data-i18n="rsvp.children">Enfants</span><input type="number" name="enfants" min="0" inputmode="numeric"></label>
+              <label><span data-i18n="rsvp.transport">Transport souhaité / informations utiles</span><textarea name="transport" rows="3"></textarea></label>
+            </fieldset>
+
+            <fieldset class="form-step" data-step="3" hidden>
+              <legend data-i18n="rsvp.step3">Repas &amp; préférences</legend>
+              <label><span data-i18n="rsvp.allergies">Allergies</span><textarea name="allergies" rows="2"></textarea></label>
+              <label><span data-i18n="rsvp.diet">Préférences alimentaires</span><textarea name="preferences_alimentaires" rows="2"></textarea></label>
+              <label class="select-label"><span data-i18n="rsvp.alcohol">Alcool</span><select name="alcool"><option value="" data-i18n="rsvp.choose">Choisir</option><option value="oui" data-i18n="rsvp.yesSimple">Oui</option><option value="non" data-i18n="rsvp.noSimple">Non</option></select></label>
+              <label class="select-label"><span data-i18n="rsvp.traditional">Tenue traditionnelle</span><select name="tenue_traditionnelle"><option value="" data-i18n="rsvp.choose">Choisir</option><option value="oui" data-i18n="rsvp.yesSimple">Oui</option><option value="non" data-i18n="rsvp.noSimple">Non</option></select></label>
+            </fieldset>
+
+            <fieldset class="form-step" data-step="4" hidden>
+              <legend data-i18n="rsvp.step4">Séjour</legend>
+              <label class="select-label"><span data-i18n="rsvp.lodging">Hébergement souhaité</span><select name="hebergement_souhaite"><option value="" data-i18n="rsvp.choose">Choisir</option><option value="oui" data-i18n="rsvp.yesSimple">Oui</option><option value="non" data-i18n="rsvp.noSimple">Non</option></select></label>
+              <label><span data-i18n="rsvp.budget">Budget par nuit</span><input type="text" name="budget_nuit" inputmode="decimal"></label>
+              <label class="select-label"><span data-i18n="rsvp.passport">Passeport / visa</span><select name="passeport_visa"><option value="" data-i18n="rsvp.choose">Choisir</option><option value="pret" data-i18n="rsvp.ready">Tout est prêt</option><option value="encours" data-i18n="rsvp.inProgress">En cours</option><option value="aide" data-i18n="rsvp.needHelp">J’ai besoin d’informations</option></select></label>
+            </fieldset>
+
+            <div class="form-progress" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span></div>
+            <div class="form-actions">
+              <button type="button" class="button button-ghost" id="prevStep" hidden data-i18n="rsvp.back">RETOUR</button>
+              <button type="button" class="button button-olive" id="nextStep" data-i18n="rsvp.next">CONTINUER</button>
+              <button type="submit" class="button button-olive" id="submitRsvp" hidden data-i18n="rsvp.submit">ENVOYER MA RÉPONSE</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="section footer-section reveal">
+        <img class="illustration illustration-small" src="assets/illustrations/olive.svg" alt="" aria-hidden="true">
+        <p class="script-title footer-names">Morwane &amp; Fatima</p>
+        <p>25 — 26 MAI 2027 · MARRAKECH</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
