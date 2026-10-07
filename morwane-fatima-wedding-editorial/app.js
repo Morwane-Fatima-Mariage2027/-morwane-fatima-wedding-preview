@@ -1,5 +1,6 @@
 (()=>{
 const T=window.MF_I18N||{},root=document.documentElement,body=document.body,entry=document.getElementById("entry"),site=document.getElementById("site"),formLang=document.getElementById("formLang");
+const daysEl=document.getElementById("days"),hoursEl=document.getElementById("hours"),minutesEl=document.getElementById("minutes"),secondsEl=document.getElementById("seconds");
 let lang=localStorage.getItem("mf-editorial-lang")||"fr";
 function setLang(l){if(!T[l])l="fr";lang=l;root.lang=l;root.dir=l==="ar"?"rtl":"ltr";if(formLang)formLang.value=l;document.querySelectorAll("[data-i18n]").forEach(el=>{const v=T[l][el.dataset.i18n];if(v!=null)el.textContent=v});document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("is-active",b.dataset.lang===l));localStorage.setItem("mf-editorial-lang",l)}
 document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
@@ -12,7 +13,14 @@ document.getElementById("openInvitation").addEventListener("click",()=>{
 
 document.querySelectorAll("[data-scroll]").forEach(b=>b.addEventListener("click",()=>document.querySelector(b.dataset.scroll)?.scrollIntoView({behavior:"smooth"})));
 
-function tick(){const target=new Date("2027-05-25T00:00:00+01:00").getTime(),d=Math.max(0,target-Date.now()),s=Math.floor(d/1000);days.textContent=String(Math.floor(s/86400)).padStart(3,"0");hours.textContent=String(Math.floor(s%86400/3600)).padStart(2,"0");minutes.textContent=String(Math.floor(s%3600/60)).padStart(2,"0");seconds.textContent=String(s%60).padStart(2,"0")}
+function tick(){
+ const target=new Date("2027-05-25T00:00:00+01:00").getTime();
+ const d=Math.max(0,target-Date.now()),s=Math.floor(d/1000);
+ daysEl.textContent=String(Math.floor(s/86400)).padStart(3,"0");
+ hoursEl.textContent=String(Math.floor(s%86400/3600)).padStart(2,"0");
+ minutesEl.textContent=String(Math.floor(s%3600/60)).padStart(2,"0");
+ secondsEl.textContent=String(s%60).padStart(2,"0");
+}
 tick();setInterval(tick,1000);
 
 const reveals=[...document.querySelectorAll(".reveal")];
